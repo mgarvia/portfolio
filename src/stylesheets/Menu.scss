@@ -1,0 +1,164 @@
+@import "utils/mixins";
+
+.Menu {
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+  &__hamburguer {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 99;
+
+    .hamburger {
+      padding: 15px 15px;
+      cursor: pointer;
+      transition-property: opacity, filter;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &.is-active {
+        &:hover {
+          opacity: 0.7;
+        }
+        position: fixed;
+        top: 25px;
+        right: 25px;
+      }
+
+      &-box {
+        width: 30px;
+        height: 24px;
+        position: relative;
+      }
+
+      &-inner,
+      &-inner:after,
+      &-inner:before {
+        position: absolute;
+        height: 3px;
+        transition-timing-function: ease;
+        transition-duration: 0.15s;
+        transition-property: transform;
+        background-color: white;
+        width: 100%;
+      }
+
+      &-inner {
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition-duration: 0.2s;
+
+        &:before {
+          top: -7px;
+          width: 50%;
+          transition: top 0.2s ease 0.25s, opacity 0.2s ease,
+            width 0ms ease 0.25s;
+        }
+
+        &:after {
+          bottom: -7px;
+          width: 50%;
+          right: 0;
+          transition: bottom 0.2s ease 0.25s,
+            transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+            width 0s ease 0.25s;
+        }
+
+        &:after,
+        &:before {
+          display: block;
+          content: "";
+        }
+      }
+
+      &.is-active .hamburger-inner {
+        transition-delay: 0.25s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: rotate(45deg);
+
+        &:before {
+          top: 0;
+          transition: top 0.2s ease, opacity 0.2s ease 0.25s,
+            width 0s ease 0.25s;
+          opacity: 0;
+          width: 100%;
+        }
+
+        &:after {
+          bottom: 0;
+          transition: bottom 0.2s ease,
+            transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s,
+            width 0s ease 0.25s;
+          transform: rotate(-90deg);
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__links {
+    background: url("https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease-in-out 0.3s, visibility ease-in-out 0.3s;
+
+    &.is-active {
+      visibility: inherit;
+      opacity: 1;
+      transition-delay: 0.25s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: opacity ease-in-out 0.3s;
+    }
+
+    li {
+      color: white;
+      font-size: 30px;
+      text-transform: uppercase;
+
+      @include forTablet {
+        padding-left: 20%;
+        font-size: 40px;
+      }
+    }
+
+    &--projects:hover {
+      color: #59c4ca;
+      font-weight: 600;
+    }
+
+    &--about:hover {
+      color: red;
+      font-weight: 600;
+    }
+
+    &--cv:hover {
+      color: #ea07ac;
+      font-weight: 600;
+    }
+
+    &--contact:hover {
+      color: green;
+      font-weight: 600;
+    }
+  }
+}

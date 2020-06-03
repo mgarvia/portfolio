@@ -1,0 +1,14 @@
+.About {
+  min-height: 50vh;
+  display: flex;
+  &__image {
+    width: 30vw;
+    height: 50vh;
+    background: violet;
+  }
+  &__info {
+    background-color: lightblue;
+    width: 70vw;
+    min-height: 50vh;
+  }
+}

@@ -1,0 +1,98 @@
+.Projects {
+  min-height: 100vh;
+  &__header {
+    // background-color: red;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      display: inline-block;
+    }
+  }
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    article:nth-child(1n):hover {
+      background: rgb(97, 238, 224);
+    }
+    article:nth-child(2n):hover {
+      background: blue;
+    }
+    article:nth-child(3n):hover {
+      background: green;
+    }
+    article:nth-child(4n):hover {
+      background: yellow;
+    }
+    article:nth-child(5n):hover {
+      background: violet;
+    }
+    article:nth-child(6n):hover {
+      background: orange;
+    }
+    &--item {
+      border: 1px solid blue;
+      flex: 33%;
+      height: 45vh;
+      // max-width: 33vw;
+      position: relative;
+      overflow: hidden;
+      transition: ease-in-out 0.6s;
+      &:hover {
+        .SingleProject {
+          &__image {
+            // display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.5, opacity 0.5;
+          }
+          &__title, &__links, &__tags {
+            z-index: 1;
+          }
+        }
+      }
+      .SingleProject {
+        &__image {
+          max-width: 100%;
+          transition: ease-in-out 0.5s;
+          // display: none;
+        }
+        &__title {
+          width: 100%;
+          position: absolute;
+          top: 40%;
+          text-align: center;
+          z-index: -1;
+        }
+        &__links {
+          position: absolute;
+          bottom: 40%;
+          width: 100%;
+          text-align: center;
+          z-index: -1;
+          a {
+            margin: 20px;
+            text-transform: uppercase;
+          }
+        }
+        &__tags {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          z-index: -1;
+          i {
+            margin: 5px;
+            font-size: 25px;
+            color: #ececec;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}
