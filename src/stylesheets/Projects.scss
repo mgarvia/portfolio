@@ -1,64 +1,137 @@
+@import "utils/variables";
+@import "utils/mixins";
+
 .Projects {
   min-height: 100vh;
   &__header {
-    // background-color: red;
-    height: 10vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    li {
-      display: inline-block;
+    // min-height: 10vh;
+    // padding: 10px;
+    // text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    border-top: 3px solid $colorMain;
+    // margin-bottom: 5px;
+
+    // &--title {
+    //   text-transform: uppercase;
+    //   display: inline-block;
+    // }
+
+    .fa-filter {
+      color: grey;
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    &--filter {
+      display: none;
+
+      &.is-active {
+        display: inherit;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &.is-active {
+          border-bottom: 2px solid #59c4ca;
+        }
+
+        @include forTablet {
+          font-size: 16px;
+          margin: 10px;
+        }
+      }
+
+      #react {
+        text-transform: capitalize;
+      }
     }
   }
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    article:nth-child(1n):hover {
-      background: rgb(97, 238, 224);
-    }
-    article:nth-child(2n):hover {
-      background: blue;
-    }
-    article:nth-child(3n):hover {
-      background: green;
-    }
-    article:nth-child(4n):hover {
-      background: yellow;
-    }
-    article:nth-child(5n):hover {
-      background: violet;
-    }
-    article:nth-child(6n):hover {
-      background: orange;
-    }
+    // article:nth-child(1n):hover {
+    //   background: #BAD74C;
+    // }
+    // article:nth-child(2n):hover {
+    //   background: rgb(243, 82, 67);
+    // }
+    // article:nth-child(3n):hover {
+    //   background: #129D8D;
+    // }
+    // article:nth-child(4n):hover {
+    //   background: rgb(97, 238, 224);
+    // }
+    // article:nth-child(5n):hover {
+    //   background: #FC2FB8;
+    // }
+    // article:nth-child(6n):hover {
+    //   background: #B677E6;
+    // }
+    // article:nth-child(7n):hover {
+    //   background: #0077FF;
+    // }
+    // article:nth-child(8n):hover {
+    //   background: #3EB1C8;
+    // }
+    // article:nth-child(9n):hover {
+    //   background: rgb(223, 91, 65);
+    // }
+    // article:nth-child(10n):hover {
+    //   background: #F56457;
+    // }
+    // article:nth-child(11n):hover {
+    //   background: #E5AE47;
+    // }
+    // article:nth-child(12n):hover {
+    //   background: #121D3B;
+    // }
+
     &--item {
-      border: 1px solid blue;
-      flex: 33%;
-      height: 45vh;
-      // max-width: 33vw;
+      border: 1px solid #fcfcfc;
+      // max-height: 45vh;
+      // max-width: 33%;
+      max-height: 33vw;
+      max-width: 33vw;
+      width: 100vw;
       position: relative;
       overflow: hidden;
       transition: ease-in-out 0.6s;
-      &:hover {
-        .SingleProject {
-          &__image {
-            // display: none;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.5, opacity 0.5;
-          }
-          &__title, &__links, &__tags {
-            z-index: 1;
+      cursor: pointer;
+
+      @include forTablet {
+        flex: 33%;
+
+        &:hover {
+          .SingleProject {
+            &__image {
+              // display: none;
+              visibility: hidden;
+              opacity: 0;
+              transition: visibility 0.5, opacity 0.5;
+            }
+            &__title,
+            &__links,
+            &__tags {
+              z-index: 1;
+            }
           }
         }
       }
+
       .SingleProject {
         &__image {
           max-width: 100%;
           transition: ease-in-out 0.5s;
-          // display: none;
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
         }
         &__title {
           width: 100%;
@@ -66,6 +139,7 @@
           top: 40%;
           text-align: center;
           z-index: -1;
+          color: white;
         }
         &__links {
           position: absolute;
@@ -76,6 +150,11 @@
           a {
             margin: 20px;
             text-transform: uppercase;
+            color: white;
+            &:hover {
+              color: grey;
+              font-weight: 600;
+            }
           }
         }
         &__tags {

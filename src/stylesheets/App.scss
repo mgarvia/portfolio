@@ -1,4 +1,4 @@
-@import 'utils/variables';
+@import "utils/variables";
 
 * {
   margin: 0px;
@@ -8,10 +8,34 @@
   padding-inline-start: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $fontTitle;
 }
 
 a {
-  color: inherit
+  color: inherit;
+}
+
+.section__header {
+  min-height: 10vh;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--title {
+    text-transform: uppercase;
+    display: inline-block;
+  }
+}
+
+.hidden {
+  display: none;
 }

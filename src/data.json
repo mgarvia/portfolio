@@ -1,72 +1,99 @@
 [
   {
-    "Title": "Collapsing Margins",
-    "Web": "http://beta.adalab.es/project-promo-i-module-1-team-3-afternoon-final/",
-    "Code": "https://github.com/mgarvia/collapsing-margins",
-    "Image": "http://localhost:3000//images/Collapsing_Margins.png",
-    "Tags" : ["html5", "css3-alt", "js-square"]
+    "Title": "Rick & Morty",
+    "Web": "http://beta.adalab.es/modulo-3-evaluacion-final-mgarvia/#/",
+    "Code": "https://github.com/mgarvia/modulo-3-evaluacion-final-mgarvia",
+    "Image": "http://localhost:3000//images/Rick-and-Morty.png",
+    "Tags" : ["html5", "css3-alt", "js-square", "react"],
+    "Color": "#BAD74C" 
   },
   {
     "Title": "Awesome Profile Cards",
     "Web": "http://beta.adalab.es/project-promo-i-module-2-team-1-afternoon/",
     "Code": "https://github.com/mgarvia/awesome-profile-cards?organization=mgarvia&organization=mgarvia",
-    "Image": "",
-    "Tags" : ["html5", "css3-alt", "js-square"]
-  },
+    "Image": "http://localhost:3000//images/Awesome_Profile_Cards.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "rgb(243, 82, 67)" 
+  }, 
   {
-    "Title": "Reactive Palettes",
-    "Web": "http://beta.adalab.es/project-promo-i-module-3-team-4-afternoon/#/",
-    "Code": "https://github.com/mgarvia/reactive-palettes",
-    "Image": "",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"]
+    "Title": "Collapsing Margins",
+    "Web": "http://beta.adalab.es/project-promo-i-module-1-team-3-afternoon-final/",
+    "Code": "https://github.com/mgarvia/collapsing-margins",
+    "Image": "http://localhost:3000//images/Collapsing_Margins.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "#129D8D"
   },
   {
     "Title": "Buscador Series & Películas",
     "Web": "http://beta.adalab.es/modulo-2-evaluacion-final-mgarvia/",
     "Code": "https://github.com/mgarvia/buscador-peliculas-series?organization=mgarvia&organization=mgarvia",
-    "Image": "",
-    "Tags" : ["html5", "css3-alt", "js-square"]
-  },
-  {
-    "Title": "Rick & Morty",
-    "Web": "http://beta.adalab.es/modulo-3-evaluacion-final-mgarvia/#/",
-    "Code": "https://github.com/mgarvia/modulo-3-evaluacion-final-mgarvia",
-    "Image": "",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"]
-  },
-  {
-    "Title": "Anonymous Proxy",
-    "Web": "http://beta.adalab.es/modulo-1-evaluacion-final-mgarvia/",
-    "Code": "https://github.com/mgarvia/modulo-1-evaluacion-final-mgarvia",
-    "Image": "",
-    "Tags" : ["html5", "css3-alt"]
-  },
-  {
-    "Title": "Guess the number",
-    "Web": "http://beta.adalab.es/modulo-2-evaluacion-intermedia-mgarvia/",
-    "Code": "https://github.com/mgarvia/modulo-2-evaluacion-intermedia-mgarvia",
-    "Image": "",
-    "Tags" : ["HTML", "CSS", "Javascript"]
-  },
+    "Image": "http://localhost:3000//images/Buscador-peliculas-series.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "rgb(97, 238, 224)" 
+  }, 
   {
     "Title": "Portfolio",
     "Web": "",
     "Code": "https://github.com/mgarvia/portfolio",
-    "Image": "",
-    "Tags" : ["HTML", "CSS", "Javascript", "React"]
+    "Image": "http://localhost:3000//images/Portfolio.png",
+    "Tags" : ["html5", "css3-alt", "js-square", "react"],
+    "Color": "#FC2FB8" 
   },
   {
-    "Title": "CRUD",
-    "Web": "",
-    "Code": "https://github.com/mgarvia/cecotec-Proceso-de-seleccion-Front-End-Developer",
-    "Image": "",
-    "Tags" : ["HTML", "CSS", "Javascript", "React"]
+    "Title": "Reactive Palettes",
+    "Web": "http://beta.adalab.es/project-promo-i-module-3-team-4-afternoon/#/",
+    "Code": "https://github.com/mgarvia/reactive-palettes",
+    "Image": "http://localhost:3000//images/Reactive-Palettes.png",
+    "Tags" : ["html5", "css3-alt", "js-square", "react"],
+    "Color": "#B677E6" 
   },
   {
     "Title": "Gestor de proyectos",
     "Web": "",
     "Code": "https://github.com/mgarvia/gestor-de-proyectos",
-    "Image": "",
-    "Tags" : ["HTML", "CSS", "Javascript"]
+    "Image": "http://localhost:3000//images/Gestor-de-proyectos.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "#0077FF" 
+  }, 
+  {
+    "Title": "CRUD",
+    "Web": "",
+    "Code": "https://github.com/mgarvia/cecotec-Proceso-de-seleccion-Front-End-Developer",
+    "Image": "http://localhost:3000//images/Crud.png",
+    "Tags" : ["html5", "css3-alt", "js-square", "react"],
+    "Color": "#3EB1C8" 
+  },
+  {
+    "Title": "Anonymous Proxy",
+    "Web": "http://beta.adalab.es/modulo-1-evaluacion-final-mgarvia/",
+    "Code": "https://github.com/mgarvia/modulo-1-evaluacion-final-mgarvia",
+    "Image": "http://localhost:3000//images/Anonymous-Proxy.png",
+    "Tags" : ["html5", "css3-alt"],
+    "Color": "rgb(223, 91, 65)" 
+  },
+  {
+    "Title": "Salsa con Andy",
+    "Web": "http://salsaconandy.es/",
+    "Code": "",
+    "Image": "http://localhost:3000//images/Salsa-con-andy.png",
+    "Tags" : ["wordpress-simple"],
+    "Color": "#F56457" 
+  },
+  {
+    "Title": "Borja Santurino - 3D Architect",
+    "Web": "https://bsanturino.com/",
+    "Code": "",
+    "Image": "http://localhost:3000//images/Borja-santurino.png",
+    "Tags" : ["wordpress-simple"],
+    "Color": "#E5AE47" 
+  },
+  {
+    "Title": "Datadesk",
+    "Web": "https://datadesk.es/",
+    "Code": "",
+    "Image": "http://localhost:3000//images/Datadesk.png",
+    "Tags" : ["wordpress-simple"],
+    "Color": "#121D3B" 
   }
+
 ]
