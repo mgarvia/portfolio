@@ -4,6 +4,9 @@ const SingleProject = props => {
   const { title, web, code, tags, image, color } = props;  const setBgColor = () => {
     const arts = document.querySelectorAll('.Projects__grid--item').forEach(project => project.style.background={color})
   }
+
+  
+
   setBgColor();
 
   return (

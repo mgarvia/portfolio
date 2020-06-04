@@ -4,8 +4,15 @@ import Menu from './Menu';
 import '../stylesheets/Header.scss'
 
 const Header = () => {
+
+  // const smoothScroll = e => {
+  //     e.preventDefault();
+  //     document.animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  //   });
+  // });
+
   return (
-    <header className="Header">
+    <header className="Header" id="aloha">
       <Menu />
       <div className="Header__content">
         <div className="aloha">
@@ -21,7 +28,7 @@ const Header = () => {
         <div className="text">
           <h1>
             <div className="text__welcome--box">
-              <p className="text__welcome typing"><span className="text__mery">I'm Mery</span>, <span className="text__front">front-en developer</span>
+              <p className="text__welcome typing"><span className="text__mery">I'm Mery,</span> <span className="text__front">front-en developer</span>
               </p>
               <p className="text__junior">junior </p>
             </div>
@@ -32,6 +39,9 @@ const Header = () => {
             <p className="typing">Have a look to my portfolio and lets code together!</p>
           </div>
         </div>
+        <section class="scroll">
+          <a className="smoothScroll" href="#love-coding"><span></span>Scroll down</a>
+        </section>
       </div>
     </header>
   )

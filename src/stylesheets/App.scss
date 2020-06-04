@@ -6,6 +6,7 @@
   list-style: none;
   font-family: $fontBody;
   padding-inline-start: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -23,6 +24,7 @@ a {
 
 .section__header {
   min-height: 10vh;
+  width: 100%;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -33,6 +35,7 @@ a {
   &--title {
     text-transform: uppercase;
     display: inline-block;
+    color: $colorContact;
   }
 }
 

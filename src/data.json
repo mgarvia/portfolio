@@ -4,8 +4,10 @@
     "Web": "http://beta.adalab.es/modulo-3-evaluacion-final-mgarvia/#/",
     "Code": "https://github.com/mgarvia/modulo-3-evaluacion-final-mgarvia",
     "Image": "http://localhost:3000//images/Rick-and-Morty.png",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"],
-    "Color": "#BAD74C" 
+    "Tags" : ["css3-alt", "js-square", "react"],
+    "Color": "#BAD74C",
+    "Subtitle": "Api request in React project",
+    "Description": "Web application with React, API request, react-router and filters."
   },
   {
     "Title": "Awesome Profile Cards",
@@ -13,7 +15,9 @@
     "Code": "https://github.com/mgarvia/awesome-profile-cards?organization=mgarvia&organization=mgarvia",
     "Image": "http://localhost:3000//images/Awesome_Profile_Cards.png",
     "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "rgb(243, 82, 67)" 
+    "Color": "rgb(243, 82, 67)" ,
+    "Subtitle": "",
+    "Description": ""
   }, 
   {
     "Title": "Collapsing Margins",
@@ -21,7 +25,9 @@
     "Code": "https://github.com/mgarvia/collapsing-margins",
     "Image": "http://localhost:3000//images/Collapsing_Margins.png",
     "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "#129D8D"
+    "Color": "#129D8D",
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Buscador Series & Películas",
@@ -29,23 +35,29 @@
     "Code": "https://github.com/mgarvia/buscador-peliculas-series?organization=mgarvia&organization=mgarvia",
     "Image": "http://localhost:3000//images/Buscador-peliculas-series.png",
     "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "rgb(97, 238, 224)" 
+    "Color": "rgb(97, 238, 224)" ,
+    "Subtitle": "",
+    "Description": ""
   }, 
   {
     "Title": "Portfolio",
     "Web": "",
     "Code": "https://github.com/mgarvia/portfolio",
     "Image": "http://localhost:3000//images/Portfolio.png",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"],
-    "Color": "#FC2FB8" 
+    "Tags" : ["css3-alt", "js-square", "react"],
+    "Color": "#FC2FB8" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Reactive Palettes",
     "Web": "http://beta.adalab.es/project-promo-i-module-3-team-4-afternoon/#/",
     "Code": "https://github.com/mgarvia/reactive-palettes",
     "Image": "http://localhost:3000//images/Reactive-Palettes.png",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"],
-    "Color": "#B677E6" 
+    "Tags" : ["css3-alt", "js-square", "react"],
+    "Color": "#B677E6" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Gestor de proyectos",
@@ -53,15 +65,19 @@
     "Code": "https://github.com/mgarvia/gestor-de-proyectos",
     "Image": "http://localhost:3000//images/Gestor-de-proyectos.png",
     "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "#0077FF" 
+    "Color": "#0077FF" ,
+    "Subtitle": "",
+    "Description": ""
   }, 
   {
     "Title": "CRUD",
     "Web": "",
     "Code": "https://github.com/mgarvia/cecotec-Proceso-de-seleccion-Front-End-Developer",
     "Image": "http://localhost:3000//images/Crud.png",
-    "Tags" : ["html5", "css3-alt", "js-square", "react"],
-    "Color": "#3EB1C8" 
+    "Tags" : ["css3-alt", "js-square", "react"],
+    "Color": "#3EB1C8" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Anonymous Proxy",
@@ -69,7 +85,9 @@
     "Code": "https://github.com/mgarvia/modulo-1-evaluacion-final-mgarvia",
     "Image": "http://localhost:3000//images/Anonymous-Proxy.png",
     "Tags" : ["html5", "css3-alt"],
-    "Color": "rgb(223, 91, 65)" 
+    "Color": "rgb(223, 91, 65)" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Salsa con Andy",
@@ -77,15 +95,19 @@
     "Code": "",
     "Image": "http://localhost:3000//images/Salsa-con-andy.png",
     "Tags" : ["wordpress-simple"],
-    "Color": "#F56457" 
+    "Color": "#F56457" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Borja Santurino - 3D Architect",
     "Web": "https://bsanturino.com/",
     "Code": "",
     "Image": "http://localhost:3000//images/Borja-santurino.png",
-    "Tags" : ["wordpress-simple"],
-    "Color": "#E5AE47" 
+    "Tags" : ["wordpress-simple", "css3-alt"],
+    "Color": "#E5AE47" ,
+    "Subtitle": "",
+    "Description": ""
   },
   {
     "Title": "Datadesk",
@@ -93,7 +115,9 @@
     "Code": "",
     "Image": "http://localhost:3000//images/Datadesk.png",
     "Tags" : ["wordpress-simple"],
-    "Color": "#121D3B" 
+    "Color": "#121D3B" ,
+    "Subtitle": "",
+    "Description": ""
   }
 
 ]

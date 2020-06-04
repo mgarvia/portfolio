@@ -4,6 +4,8 @@ import Projects from './Projects';
 import Quote from './Quote';
 import About from './About';
 import Contact from './Contact';
+import ScrollBtn from './ScrollBtn';
+import Footer from './Footer';
 import data from '../data.json';
 
 import '../stylesheets/App.scss';
@@ -31,9 +33,9 @@ class App extends React.Component {
 
   updateProjects = item => {
     const { projects, filter } = this.state
-    
+
     const showProjects = projects.filter(project => project.Tags.includes(item.id));
-    
+
     console.log(item.id)
     console.log(showProjects)
 
@@ -102,9 +104,9 @@ class App extends React.Component {
       //     [item.innerHTML]: false
       //   })
       // } else {
-        this.setState({
-          [item.innerHTML]: true
-        })
+      this.setState({
+        [item.innerHTML]: true
+      })
       // }
       // } else if (filter.findIndex(tag => tag === item.id) === -1) {
       //   this.setState(prev => ({
@@ -127,15 +129,40 @@ class App extends React.Component {
     }
   }
 
+  smoothScroll = () => {
+    let buttons = document.querySelectorAll('.smoothScroll');
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = e.currentTarget.getAttribute('href');
+
+        document.querySelector(target).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
+
   render() {
     // console.log(data)
     const { projects, filter, Html, Css, Javascript, react, Wordpress } = this.state;
-    const { updateFilter } = this;
+    const { updateFilter, smoothScroll } = this;
+
+    smoothScroll()
 
     return (
-      <div className="App">
+      <div className="App" >
+        <ScrollBtn />
         <Header />
         <main>
+          <Quote
+            id={'love-coding'}
+            icon={"https://media.giphy.com/media/LpDmM2wSt6Hm5fKJVa/giphy.gif"}
+            quote={"Coding"}
+            bgUrl={"https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"}
+            flex={'row'}
+            customClass={'love'}
+          />
           <Projects
             projects={projects}
             filter={filter}
@@ -146,12 +173,19 @@ class App extends React.Component {
             react={react}
             wp={Wordpress}
           />
-          <Quote />
           <About />
+          <Quote
+            id={'CV'}
+            bgUrl={"http://localhost:3000//images/Trabajo-en-equipo.jpg"}
+            quote={"Why should you work with me?"}
+            children={<a className="cv" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>}
+            flex={'column'}
+            customClass={'cv'}
+          />
           <Contact />
         </main>
         <footer>
-
+          <Footer />
         </footer>
       </div>
     );

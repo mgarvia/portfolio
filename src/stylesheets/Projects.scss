@@ -3,6 +3,7 @@
 
 .Projects {
   min-height: 100vh;
+  border-left: 3px solid $colorProjects;
   &__header {
     // min-height: 10vh;
     // padding: 10px;
@@ -11,7 +12,7 @@
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    border-top: 3px solid $colorMain;
+    // border-top: 3px solid $colorProjects;
     // margin-bottom: 5px;
 
     // &--title {
@@ -23,6 +24,7 @@
       color: grey;
       font-size: 14px;
       padding: 5px;
+      cursor: pointer;
     }
 
     &--filter {
@@ -39,7 +41,7 @@
         cursor: pointer;
 
         &.is-active {
-          border-bottom: 2px solid #59c4ca;
+          border-bottom: 2px solid $colorProjects;
         }
 
         @include forTablet {
@@ -97,8 +99,8 @@
       border: 1px solid #fcfcfc;
       // max-height: 45vh;
       // max-width: 33%;
-      max-height: 33vw;
-      max-width: 33vw;
+      max-height: 25vw;
+      max-width: 25vw;
       width: 100vw;
       position: relative;
       overflow: hidden;
@@ -106,7 +108,7 @@
       cursor: pointer;
 
       @include forTablet {
-        flex: 33%;
+        flex: 25%;
 
         &:hover {
           .SingleProject {
@@ -151,8 +153,10 @@
             margin: 20px;
             text-transform: uppercase;
             color: white;
+            padding: 10px 0;
             &:hover {
-              color: grey;
+              border-bottom: 2px solid whitesmoke;
+              // color: grey;
               font-weight: 600;
             }
           }

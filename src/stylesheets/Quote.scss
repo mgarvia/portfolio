@@ -1,29 +1,54 @@
+@import "utils/variables";
+@import "utils/mixins";
+
 .Quote {
   min-height: 50vh;
-  background: url("https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
+
+  &__row {
+    flex-direction: row;
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+
+  img {
+    height: 50px;
+  }
 
   h3 {
     font-size: 40px;
-    margin: 5px;
     text-transform: uppercase;
   }
-  .work {
-    color: pink;
+
+  &__love {
+    h3 {
+      color: red;
+    }
   }
 
-  .coffee {
-    color: orange;
+  &__cv {
+    border-left: 3px solid $colorCv;
+    * {
+      color: white;
+      margin: 20px 0;
+    }
   }
+}
 
-  .code {
-    color: cyan;
+.cv {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 25px;
+  &:hover {
+    color: $colorCv;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    // opacity: 0.7;
+    font-weight: 600;
   }
 }

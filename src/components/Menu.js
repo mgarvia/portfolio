@@ -16,10 +16,10 @@ const Menu = () => {
       </div>
       <nav >
         <ul className="Menu__links">
-          <li className="Menu__links--projects" onClick={toggleIsActive}><a href="http://localhost:3000/#Projects">Proyects</a></li>
-          <li className="Menu__links--about" onClick={toggleIsActive}><a href="http://localhost:3000/#About">About</a></li>
-          <li className="Menu__links--cv" onClick={toggleIsActive}><a href="http://localhost:3000/#CV">CV</a></li>
-          <li className="Menu__links--contact" onClick={toggleIsActive}><a href="http://localhost:3000/#Contact">Call me</a></li>
+          <li className="Menu__links--projects" onClick={toggleIsActive}><a className="smoothScroll" href="#Projects">Proyects</a></li>
+          <li className="Menu__links--about" onClick={toggleIsActive}><a className="smoothScroll" href="#About">About</a></li>
+          <li className="Menu__links--cv" onClick={toggleIsActive}><a className="smoothScroll" href="#CV">CV</a></li>
+          <li className="Menu__links--contact" onClick={toggleIsActive}><a className="smoothScroll" href="#Contact">Contact</a></li>
         </ul>
       </nav>
     </div>
