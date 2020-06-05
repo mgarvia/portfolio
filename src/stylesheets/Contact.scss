@@ -47,8 +47,12 @@
 
   .links {
     display: flex;
-    min-width: 500px;
+    
     justify-content: space-between;
+
+    @include forTablet {
+      min-width: 500px;
+    }
 
     a {
       text-decoration: none;

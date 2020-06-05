@@ -2,26 +2,12 @@
 @import "utils/mixins";
 
 .Projects {
-  min-height: 100vh;
   border-left: 3px solid $colorProjects;
   &__header {
-    // min-height: 10vh;
-    // padding: 10px;
-    // text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // border-top: 3px solid $colorProjects;
-    // margin-bottom: 5px;
-
-    // &--title {
-    //   text-transform: uppercase;
-    //   display: inline-block;
-    // }
-
+    display: flex;
+    justify-content: center;
     .fa-filter {
-      color: grey;
+      color: $colorContact;
       font-size: 14px;
       padding: 5px;
       cursor: pointer;
@@ -30,7 +16,7 @@
     &--filter {
       display: none;
 
-      &.is-active {
+      &.showFilters {
         display: inherit;
       }
 
@@ -56,124 +42,156 @@
     }
   }
   &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    // article:nth-child(1n):hover {
-    //   background: #BAD74C;
-    // }
-    // article:nth-child(2n):hover {
-    //   background: rgb(243, 82, 67);
-    // }
-    // article:nth-child(3n):hover {
-    //   background: #129D8D;
-    // }
-    // article:nth-child(4n):hover {
-    //   background: rgb(97, 238, 224);
-    // }
-    // article:nth-child(5n):hover {
-    //   background: #FC2FB8;
-    // }
-    // article:nth-child(6n):hover {
-    //   background: #B677E6;
-    // }
-    // article:nth-child(7n):hover {
-    //   background: #0077FF;
-    // }
-    // article:nth-child(8n):hover {
-    //   background: #3EB1C8;
-    // }
-    // article:nth-child(9n):hover {
-    //   background: rgb(223, 91, 65);
-    // }
-    // article:nth-child(10n):hover {
-    //   background: #F56457;
-    // }
-    // article:nth-child(11n):hover {
-    //   background: #E5AE47;
-    // }
-    // article:nth-child(12n):hover {
-    //   background: #121D3B;
-    // }
+    @include forTablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-    &--item {
+    .SingleProject {
       border: 1px solid #fcfcfc;
-      // max-height: 45vh;
-      // max-width: 33%;
-      max-height: 25vw;
-      max-width: 25vw;
-      width: 100vw;
+      max-height: 100vh;
+      max-width: 100vw;
       position: relative;
       overflow: hidden;
       transition: ease-in-out 0.6s;
       cursor: pointer;
 
       @include forTablet {
+        flex: 50%;
+        max-height: 50vw;
+        max-width: 50vw;
+      }
+
+      @include forPc {
         flex: 25%;
+        max-height: 25vw;
+        max-width: 25vw;
 
         &:hover {
           .SingleProject {
             &__image {
-              // display: none;
               visibility: hidden;
               opacity: 0;
               transition: visibility 0.5, opacity 0.5;
             }
-            &__title,
-            &__links,
-            &__tags {
+            &__info * {
+              visibility: visible;
               z-index: 1;
             }
           }
         }
       }
 
-      .SingleProject {
-        &__image {
-          max-width: 100%;
-          transition: ease-in-out 0.5s;
-          object-fit: cover;
+      &__image {
+        transition: ease-in-out 0.5s;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transition: visibility ease-in-out 0.5, ease-in-out opacity 0.5;
+      }
+
+      &__info {
+        font-size: 12px;
+        height: 30%;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+        text-align: center;
+        transition: visibility ease-in-out 0.5;
+        padding: 5px;
+        border-top: 3px solid white;
+
+        * {
+          margin: 2px;
+        }
+
+        @include forPc {
+          font-size: 16px;
           height: 100%;
-          width: 100%;
-        }
-        &__title {
-          width: 100%;
-          position: absolute;
-          top: 40%;
-          text-align: center;
-          z-index: -1;
+          visibility: hidden;
           color: white;
-        }
-        &__links {
-          position: absolute;
-          bottom: 40%;
-          width: 100%;
-          text-align: center;
-          z-index: -1;
-          a {
-            margin: 20px;
-            text-transform: uppercase;
-            color: white;
-            padding: 10px 0;
-            &:hover {
-              border-bottom: 2px solid whitesmoke;
-              // color: grey;
-              font-weight: 600;
+          .SingleProject {
+            &__title {
+              display: block;
+              font-size: 24px;
+            }
+
+            &__subtitle {
+              font-size: 16px;
+              color: $colorBody;
+            }
+
+            &__description {
+              display: block;
+            }
+
+            &__tags {
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+
+              i {
+                margin: 5px;
+                font-size: 25px;
+
+                &:hover {
+                  opacity: 0.6;
+                }
+              }
             }
           }
-        }
-        &__tags {
-          position: absolute;
-          bottom: 20px;
-          right: 20px;
-          z-index: -1;
-          i {
-            margin: 5px;
-            font-size: 25px;
-            color: #ececec;
-            &:hover {
-              opacity: 0.6;
-            }
+
+          .fa-sort-down {
+            display: none;
           }
+        }
+
+        h2,
+        h3 {
+          text-transform: uppercase;
+        }
+
+        .fa-sort-down {
+          font-size: 43px;
+          color: white;
+          position: absolute;
+          top: -27px;
+        }
+      }
+
+      &__title {
+        display: none;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      &__description {
+        display: none;
+      }
+
+      &__links {
+        a {
+          margin: 20px;
+          text-transform: uppercase;
+          color: $colorProjects;
+          &:hover {
+            border-bottom: 2px solid whitesmoke;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &__tags {
+        i {
+          margin: 2px;
+          font-size: 18px;
+          color: lightgrey;
         }
       }
     }

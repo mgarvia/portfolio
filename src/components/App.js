@@ -16,7 +16,6 @@ class App extends React.Component {
     this.state = {
       data: data,
       projects: data,
-      filter: [],
       Html: false,
       Css: false,
       Javascript: false,
@@ -27,12 +26,20 @@ class App extends React.Component {
 
   componentDidMount = () => {
     this.setState({
-      filter: ["html5", "css3-alt", "js-square", "react", "wordpress-simple"]
+      Html: false,
+      Css: false,
+      Javascript: false,
+      react: false,
+      Wordpress: false,
     })
   }
 
+  toogleMenu = () => document.querySelectorAll('.toggleMenu').forEach(item => item.addEventListener('click', this.toggleIsActive));
+
+  toggleIsActive = () => document.querySelectorAll('.hamburger, .Menu__links').forEach(item => item.classList.toggle('is-active'));
+
   updateProjects = item => {
-    const { projects, filter } = this.state
+    const { projects } = this.state
 
     const showProjects = projects.filter(project => project.Tags.includes(item.id));
 
@@ -45,44 +52,7 @@ class App extends React.Component {
 
   }
 
-  // updateFilter = item => {
-  //   const { filter } = this.state;
-  //   const itemIndex = filter.findIndex(tag => tag === item.id);
-
-  //   if (item.innerHTML === "All") {
-  //     this.setState({
-  //       filter: ["html5", "css3-alt", "js-square", "react", "wordpress-simple"]
-  //     })
-  //   } else {
-  //     if (filter.length === 5 && !item.classList.contains('is-active')) {
-  //       this.setState({
-  //         filter: [item.id]
-  //       })
-  //     } else if (filter.findIndex(tag => tag === item.id) === -1) {
-  //       this.setState(prev => ({
-  //         ...prev,
-  //         filter: [...prev.filter, item.id]
-  //       }))
-  //     } else if (item.classList.contains('is-active')) {
-  //       const tagIndex = filter.findIndex(tag => tag === item.id);
-  //       const newFilter = filter.splice(tagIndex, 1);
-  //       this.setState({
-  //         filter: filter
-  //       })
-  //     }
-  //     if (!filter.length) {
-  //       this.setState({
-  //         filter: ["html5", "css3-alt", "js-square", "react", "wordpress-simple"]
-  //       })
-  //       document.querySelector('.filter-item-all').classList.add('is-active')
-  //     }
-  //   }
-  // }
-
   updateFilter = item => {
-    const { filter } = this.state;
-    // const itemIndex = filter.findIndex(tag => tag === item.id);
-
     if (item.innerHTML === "All") {
       this.setState({
         Html: false,
@@ -99,33 +69,9 @@ class App extends React.Component {
         react: false,
         Wordpress: false,
       })
-      // if (item.classList.contains('is-active')) {
-      //   this.setState({
-      //     [item.innerHTML]: false
-      //   })
-      // } else {
       this.setState({
         [item.innerHTML]: true
       })
-      // }
-      // } else if (filter.findIndex(tag => tag === item.id) === -1) {
-      //   this.setState(prev => ({
-      //     ...prev,
-      //     filter: [...prev.filter, item.id]
-      //   }))
-      // } else if (item.classList.contains('is-active')) {
-      //   const tagIndex = filter.findIndex(tag => tag === item.id);
-      //   const newFilter = filter.splice(tagIndex, 1);
-      //   this.setState({
-      //     filter: filter
-      //   })
-      // }
-      // if (!filter.length) {
-      //   this.setState({
-      //     filter: ["html5", "css3-alt", "js-square", "react", "wordpress-simple"]
-      //   })
-      //   document.querySelector('.filter-item-all').classList.add('is-active')
-      // }
     }
   }
 
@@ -144,24 +90,25 @@ class App extends React.Component {
   }
 
   render() {
-    // console.log(data)
     const { projects, filter, Html, Css, Javascript, react, Wordpress } = this.state;
-    const { updateFilter, smoothScroll } = this;
+    const { updateFilter, smoothScroll, toogleMenu } = this;
 
     smoothScroll()
+    toogleMenu()
 
     return (
       <div className="App" >
-        <ScrollBtn />
         <Header />
         <main>
           <Quote
             id={'love-coding'}
-            icon={"https://media.giphy.com/media/LpDmM2wSt6Hm5fKJVa/giphy.gif"}
-            quote={"Coding"}
             bgUrl={"https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"}
-            flex={'row'}
-            customClass={'love'}
+            flex={'row-reverse'}
+            colorTitle={'red'}
+            quote={"Coding"}
+            children={
+              <div className="icon" src="https://media.giphy.com/media/LpDmM2wSt6Hm5fKJVa/giphy.gif"></div>
+            }
           />
           <Projects
             projects={projects}
@@ -177,16 +124,17 @@ class App extends React.Component {
           <Quote
             id={'CV'}
             bgUrl={"http://localhost:3000//images/Trabajo-en-equipo.jpg"}
-            quote={"Why should you work with me?"}
-            children={<a className="cv" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>}
             flex={'column'}
-            customClass={'cv'}
+            colorTitle={'white'}
+            quote={"Why should you work with me?"}
+            children={<a className="cv-download" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>}
           />
           <Contact />
         </main>
         <footer>
           <Footer />
         </footer>
+        <ScrollBtn />
       </div>
     );
   }

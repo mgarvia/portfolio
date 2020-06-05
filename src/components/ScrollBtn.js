@@ -3,8 +3,8 @@ import '../stylesheets/ScrollBtn.scss'
 
 const ScrollBtn = () => {
   return (
-    <div class="ScrollBtn">
-      <a className="smoothScroll" href="#aloha" ><i class="fas fa-chevron-up"></i></a>
+    <div className="ScrollBtn">
+      <a className="smoothScroll" href="#Aloha" ><i className="fas fa-chevron-up"></i></a>
     </div>
   )
 }

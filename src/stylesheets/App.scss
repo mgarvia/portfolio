@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+body {
+  color: $colorBody;
+}
+
 h1,
 h2,
 h3,
@@ -37,8 +41,4 @@ a {
     display: inline-block;
     color: $colorContact;
   }
-}
-
-.hidden {
-  display: none;
 }

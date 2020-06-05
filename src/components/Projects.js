@@ -1,40 +1,18 @@
 import React from 'react';
 import SingleProject from './SingleProject';
 import '../stylesheets/Projects.scss';
-// import projects from '../data.json';
 
 const Projects = props => {
   const { projects, updateFilter, html, css, js, react, wp } = props;
-  const toggleIsActive = () => document.querySelector('.Projects__header--filter').classList.toggle('is-active');
+ 
+  const showFilters = () => document.querySelector('.Projects__header--filter').classList.toggle('showFilters');
 
   const getValue = e => {
     const filters = document.querySelectorAll('.filter-item');
-    // updateFilter(e.currentTarget.innerHTML)
     updateFilter(e.currentTarget)
-
-    // if(e.currentTarget.innerHTML === "All") {
-    //   filters.forEach(item => item.classList.remove('is-active'))
-    //   e.currentTarget.classList.add('is-active')
-    // } else {
-    //   if (!e.currentTarget.classList.contains('is-active'))
-    //   document.querySelector('.filter-item-all').classList.remove('is-active')
-    //   e.currentTarget.classList.toggle('is-active')
-    // }
-
-    // if(e.currentTarget.innerHTML !== "All") {
-
-    // }
 
     filters.forEach(item => item.classList.remove('is-active'))
     e.currentTarget.classList.add('is-active')
-    // if (e.currentTarget.innerHTML === "All") {
-
-      
-    // } else {
-    //   if (!e.currentTarget.classList.contains('is-active'))
-    //     document.querySelector('.filter-item-all').classList.remove('is-active')
-    //   e.currentTarget.classList.toggle('is-active')
-    // }
 
   }
 
@@ -43,7 +21,7 @@ const Projects = props => {
       <div className="Projects__header section__header">
         <div>
           <h2 className="section__header--title">Projects</h2>
-          <i className="fas fa-filter" onClick={toggleIsActive}></i>
+          <i className="fas fa-filter" onClick={showFilters}></i>
         </div>
         <nav>
           <ul className="Projects__header--filter">
@@ -67,11 +45,13 @@ const Projects = props => {
             <SingleProject
               key={index}
               title={obj.Title}
+              subtitle={obj.Subtitle}
               web={obj.Web}
               code={obj.Code}
               image={obj.Image}
               tags={obj.Tags}
               color={obj.Color}
+              description={obj.Description}
             />
           )}
       </div>

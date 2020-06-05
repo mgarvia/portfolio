@@ -2,21 +2,17 @@
 
 .Menu {
   position: relative;
-  top: 0px;
-  left: 0px;
 
   &__hamburguer {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 0;
+    right: 0;
     z-index: 99;
 
     .hamburger {
-      padding: 15px 15px;
+      padding: 30px 20px 0px 10px;
       cursor: pointer;
-      transition-property: opacity, filter;
-      transition-duration: 0.15s;
-      transition-timing-function: linear;
+      transition: opacity 0.15s linear;
       background-color: transparent;
       border: none;
       outline: none;
@@ -25,19 +21,27 @@
         opacity: 0.6;
       }
 
+      @include forTablet {
+        padding: 40px 30px 0px 20px;
+      }
+
       &.is-active {
+        position: fixed;
+        right: 0;
         &:hover {
           opacity: 0.7;
         }
-        position: fixed;
-        top: 25px;
-        right: 25px;
       }
 
       &-box {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         position: relative;
+
+        @include forTablet {
+          width: 40px;
+          height: 40px;
+        }
       }
 
       &-inner,
@@ -45,37 +49,41 @@
       &-inner:before {
         position: absolute;
         height: 3px;
-        transition-timing-function: ease;
-        transition-duration: 0.15s;
-        transition-property: transform;
+        transition: transform ease 0.15s;
         background-color: white;
         width: 100%;
       }
 
       &-inner {
-        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-        transition-duration: 0.2s;
+        transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s;
+
+        &:before,
+        &:after {
+          width: 50%;
+          display: block;
+          content: "";
+        }
 
         &:before {
-          top: -10px;
-          width: 50%;
+          top: -8px;
           transition: top 0.2s ease 0.25s, opacity 0.2s ease,
             width 0ms ease 0.25s;
+
+          @include forTablet {
+            top: -10px;
+          }
         }
 
         &:after {
-          bottom: -10px;
-          width: 50%;
+          bottom: -8px;
           right: 0;
           transition: bottom 0.2s ease 0.25s,
             transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19),
             width 0s ease 0.25s;
-        }
 
-        &:after,
-        &:before {
-          display: block;
-          content: "";
+            @include forTablet {
+              bottom: -10px;
+            }
         }
       }
 
@@ -84,12 +92,16 @@
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: rotate(45deg);
 
+        &:before,
+        &:after {
+          width: 100%;
+        }
+
         &:before {
           top: 0;
           transition: top 0.2s ease, opacity 0.2s ease 0.25s,
             width 0s ease 0.25s;
           opacity: 0;
-          width: 100%;
         }
 
         &:after {
@@ -98,16 +110,15 @@
             transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s,
             width 0s ease 0.25s;
           transform: rotate(-90deg);
-          width: 100%;
         }
       }
     }
   }
 
   &__links {
-    background: url("https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background: url("https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      center;
     background-size: cover;
-    background-position: center;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -126,14 +137,17 @@
       visibility: inherit;
       opacity: 1;
       transition-delay: 0.25s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
       transition: opacity ease-in-out 0.3s;
     }
 
     li {
       color: white;
-      font-size: 30px;
+      font-size: 25px;
       text-transform: uppercase;
+
+      &:hover {
+        font-weight: 600;
+      }
 
       @include forTablet {
         padding-left: 20%;
@@ -142,23 +156,19 @@
     }
 
     &--projects:hover {
-      color: #59c4ca;
-      font-weight: 600;
+      color: $colorProjects;
     }
 
     &--about:hover {
-      color: #ce3635;
-      font-weight: 600;
+      color: $colorAbout;
     }
 
     &--cv:hover {
       color: $colorCv;
-      font-weight: 600;
     }
 
     &--contact:hover {
       color: $colorContact;
-      font-weight: 600;
     }
   }
 }

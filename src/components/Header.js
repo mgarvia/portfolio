@@ -4,25 +4,18 @@ import Menu from './Menu';
 import '../stylesheets/Header.scss'
 
 const Header = () => {
-
-  // const smoothScroll = e => {
-  //     e.preventDefault();
-  //     document.animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-  //   });
-  // });
-
   return (
-    <header className="Header" id="aloha">
+    <header className="Header" id="Aloha">
       <Menu />
       <div className="Header__content">
         <div className="aloha">
           <h2>
-            <div className="aloha-a">A</div>
-            <div className="aloha-l">l</div>
-            <div className="aloha-o">o</div>
-            <div className="aloha-h">h</div>
-            <div className="aloha-a">a</div>
-            <div className="aloha-ex">!</div>
+            <span className="aloha-a">A</span>
+            <span className="aloha-l">l</span>
+            <span className="aloha-o">o</span>
+            <span className="aloha-h">h</span>
+            <span className="aloha-a">a</span>
+            <span className="aloha-ex">!</span>
           </h2>
         </div>
         <div className="text">
@@ -35,12 +28,12 @@ const Header = () => {
           </h1>
           <div className="text__description css-typing">
             <p className="typing">Working hard to become the most experienced developer ever!</p>
-            <p className="typing">Meanwhile, I'm just the most enthusiastic, commited and full of energy hardworker you'll probably want to have in your team ;)</p>
+            <p className="typing">Meanwhile, I'm just the most enthusiastic, commited and full of energy hardworker you'll have in your team ;)</p>
             <p className="typing">Have a look to my portfolio and lets code together!</p>
           </div>
         </div>
-        <section class="scroll">
-          <a className="smoothScroll" href="#love-coding"><span></span>Scroll down</a>
+        <section className="scrollDown">
+          <a className="smoothScroll" href="#Projects"><span></span>Scroll down</a>
         </section>
       </div>
     </header>
@@ -48,5 +41,3 @@ const Header = () => {
 }
 
 export default Header;
-
-// https://codepen.io/nxworld/pen/OyRrGy
