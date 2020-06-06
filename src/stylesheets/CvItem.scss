@@ -1,0 +1,90 @@
+@import "utils/variables";
+@import "utils/mixins";
+
+.CvItem {
+  &,
+  .CvItem--hover {
+    width: 40vw;
+    height: 25vw;
+    font-size: 11px;
+    box-shadow: 3px 3px lightgrey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin: 4px 0;
+
+    @include forTablet {
+      width: 35vw;
+      height: 15vw;
+    }
+
+    @include forPc {
+      width: 16vw;
+      height: 8vw;
+      font-size: inherit;
+    }
+  }
+
+  &:hover {
+    @include forPc {
+      .CvItem--hover,
+      p {
+        visibility: visible;
+      }
+    }
+  }
+
+  .fas {
+    color: lightgrey;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  span {
+    visibility: hidden;
+    @include forPc {
+      visibility: inherit;
+      padding: 0 5px;
+      margin-top: 5px;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+  }
+
+  &--hover {
+    position: absolute;
+    background-color: whitesmoke;
+    visibility: hidden;
+
+    p {
+      visibility: visible;
+      position: absolute;
+      bottom: 15px;
+
+      @include forTablet {
+        bottom: 20px;
+      }
+
+      @include forPc {
+        visibility: hidden;
+        position: static;
+        font-weight: 600;
+        
+      }
+    }
+  }
+
+  .studies {
+    color: #5e79bc;
+  }
+
+  .work {
+    color: #5e8c64;
+  }
+}

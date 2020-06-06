@@ -1,9 +1,7 @@
 import React from 'react';
 
 const SingleProject = props => {
-  const { title, subtitle, web, code, tags, image, color, description } = props; const setBgColor = () => {
-    const arts = document.querySelectorAll('.Projects__grid--item').forEach(project => project.style.background = { color })
-  }
+  const { title, subtitle, web, code, tags, image, color, description } = props; const setBgColor = () => document.querySelectorAll('.Projects__grid--item').forEach(project => project.style.background = { color });
 
 
 
@@ -13,7 +11,7 @@ const SingleProject = props => {
     <article className="SingleProject" style={{ background: `${color}` }}>
       <img className="SingleProject__image" src={image} alt={title} />
       <div className="SingleProject__info" >
-        <i class="fas fa-sort-down"></i>
+        <i className="fas fa-sort-down"></i>
         <h2 className="SingleProject__title">{title}</h2>
         <h3 className="SingleProject__subtitle">{subtitle}</h3>
         <p className="SingleProject__description">{description}</p>

@@ -1,4 +1,5 @@
 @import "utils/variables";
+@import "utils/mixins";
 
 * {
   margin: 0px;
@@ -11,6 +12,15 @@
 
 body {
   color: $colorBody;
+  font-size: 12px;
+
+  @include forTablet {
+    font-size: 14px;
+  }
+
+  @include forPc {
+    font-size: 16px;
+  }
 }
 
 h1,

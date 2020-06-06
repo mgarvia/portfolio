@@ -1,4 +1,5 @@
 import React from 'react';
+import CvItem from './CvItem';
 import '../stylesheets/About.scss'
 
 const About = () => {
@@ -63,73 +64,51 @@ const About = () => {
   return (
     <section className="About" id="About">
       <div className="About__icons">
-        <img src="http://localhost:3000//images/react.png" />
-        <img src="http://localhost:3000//images/html5.png" />
-        <img src="http://localhost:3000//images/css3.png" />
-        <img src="http://localhost:3000//images/sass.png" />
-        <img src="http://localhost:3000//images/js.png" />
-        <img src="http://localhost:3000//images/wordpress.png" />
-        <img src="http://localhost:3000//images/git.png" />
-        <img src="http://localhost:3000//images/visual-studio-code.png" />
-        <img src="http://localhost:3000//images/zeplin.png" />
-        <img src="http://localhost:3000//images/slack.png" />
-        <img src="http://localhost:3000//images/zeplin.png" />
-        <img src="http://localhost:3000//images/trello.png" />
-        <img src="http://localhost:3000//images/gulp.png" />
+        <img alt="icono react" src="http://localhost:3000//images/react.png" />
+        <img alt="icono html5" src="http://localhost:3000//images/html5.png" />
+        <img alt="icono css3" src="http://localhost:3000//images/css3.png" />
+        <img alt="icono sass" src="http://localhost:3000//images/sass.png" />
+        <img alt="icono javascript" src="http://localhost:3000//images/js.png" />
+        <img alt="icono wordpress" src="http://localhost:3000//images/wordpress.png" />
+        <img alt="icono git" src="http://localhost:3000//images/git.png" />
+        <img alt="icono visual studio code" src="http://localhost:3000//images/visual-studio-code.png" />
+        <img alt="icono zeplin" src="http://localhost:3000//images/zeplin.png" />
+        <img alt="icono slack" src="http://localhost:3000//images/slack.png" />
+        <img alt="icono github" src="http://localhost:3000//images/github.png" />
+        <img alt="icono trello" src="http://localhost:3000//images/trello.png" />
+        <img alt="icono gulp" src="http://localhost:3000//images/gulp.png" />
       </div>
       <div className="About__section">
         <div className="About__header section__header">
           <h2 className="section__header--title">This is me</h2>
         </div>
         <div className="About__content">
-          <div className="About__past">
-            <div className="About__past--image"></div>
-            <div className="About__past--text">
-              <p>I studied Law, a year in <span>Italy</span> , started working in the international education industry, moved to <span>Australia</span>, more studying, more working, <span>english</span> everywhere, and back to <span>Spain</span>. I learned about <span>digital marketing</span>, created <span>my own start-up</span>, 100% <span>digital</span>, 100% <span>remote</span>, incubated a <span>technological project</span> in an entrepreneurship program, sold my company and finally did a <span>bootcamp in frontend development</span>.</p>
+          <div className="About__past About__half">
+            <div className="About__past--image picture"></div>
+            <div className="About__past--text text">
+              <p>I studied Law, a year in <span>Italy</span> , started working in the international education industry, moved to <span>Australia</span>, more studying, more working, <span>english</span> everywhere, and back to <span>Spain</span>.</p>
+              <p> I learned about <span>digital marketing</span>, created <span>my own start-up</span>, 100% <span>digital</span>, 100% <span>remote</span>, incubated a <span>technological project</span> in an entrepreneurship program, sold my company and finally did a <span>bootcamp in frontend development</span>.</p>
             </div>
             <div className="About__past--info About__info-section">
               <h3>[My past]</h3>
-              <p>Law & Marketing. <br />Sales & Operations Country Manager. <br />Entrepreneur. Expert in making things happen.</p>
-              {/* <div className="timeline">
-              <section className="timeline__icons">
-                <img src="http://localhost:3000//images/uk.png" />
-                <img src="http://localhost:3000//images/it.png" />
-                <img src="http://localhost:3000//images/au.png" />
-                <img src="http://localhost:3000//images/entrepreneur.png" />
-                <img src="http://localhost:3000//images/au.png" />
-                <img src="http://localhost:3000//images/au.png" />
-              </section>
-              <div className="timeline__line timeline__line--past"></div>
-              <section className="timeline__info">
-                <div>uk</div>
-                <div>it</div>
-                <div>au</div>
-                <div>Emp</div>
-                <div>Dch</div>
-                <div>Mkt</div>
-              </section>
-            </div> */}
+              <p>Law & Marketing. </p>
+              <p>Sales & Operations Country Manager.</p> <p>Entrepreneur. Expert in making things happen.</p>
             </div>
           </div>
-          <div className="About__future">
-            <div className="About__future--image"></div>
-            <div className="About__future--text">
+          <div className="About__future About__half">
+            <div className="About__future--image picture"></div>
+            <div className="About__future--text text">
               <p>
-                It may sound weird, but it has been my professional career what brought me here, to the techie world. I am an <span>open minded</span> professional, <span>hardworker</span>, who believes in <span>teamwork</span> and <span>autonomy</span>. The <span>initiative and curiosity</span> that took me to entrepreneur with  <span>success</span> a few years ago now takes me to become a frontend developer. I am just <span>ready for the next challenge</span>!
+                It may sound weird, but it has been my professional career what brought me here, to the techie world. I am an <span>open minded</span> professional, <span>hardworker</span>, who believes in <span>teamwork</span> and <span>autonomy</span>. </p>
+              <p>The <span>initiative and curiosity</span> that took me to entrepreneur with  <span>success</span> a few years ago now takes me to become a frontend developer. I am just <span>ready for the next challenge</span>!
             </p>
 
             </div>
             <div className="About__future--info About__info-section">
               <h3><i className="fas fa-chevron-left"></i>My future<i className="fas fa-chevron-right"></i></h3>
-              <p>Front-end developer. <br />Learning to turn incredible designs into tangible projects. <br />Looking forward to the next challenge.</p>
-              {/* <div className="timeline__line"></div>
-            <section className="info-icons">
-              <div>HTML</div>
-              <div>CSS</div>
-              <div>JS</div>
-              <div>REACT</div>
-              <div>SASS</div>
-            </section> */}
+              <p>Front-end developer. </p>
+              <p>Learning to turn incredible designs into tangible projects. </p>
+              <p>Looking forward to the next challenge.</p>
             </div>
           </div>
         </div>
@@ -144,92 +123,75 @@ const About = () => {
         </div>
         <div className="About__skills--box">
           <div className="About__skills">
-            <div className="About__skills--item">
-              <h3>Law</h3>
-              <span>International</span>
-              <div className="About__skills--hover">
-                <p>Bachelor Degree in Law - UCM</p>
-                <span>1 year studies in Italy</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>Entrepreneurship</h3>
-              <span>
-                <span>Lean Startup</span>
-                <span>MVP</span>
-              </span>
-              <div className="About__skills--hover">
-                <p>Incubation program - Santander Bank</p>
-                <span>Project semifinalist</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>Digital Marketing</h3>
-              <span>
-                <span>Seo</span>
-                <span>Sem</span>
-                <span>Wordpress</span>
-              </span>
-              <div className="About__skills--hover">
-                <p>Expert certificate - BAI</p>
-                <span>Digital marketing 360</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>Front-end</h3>
-              <span>
-                <span>Scrum</span>
-                <span>Agile</span>
-                <span>Git</span>
-              </span>
-              <div className="About__skills--hover">
-                <p>Bootcamp - Adalab</p>
-                <span>Html & Css | Js | React</span>
-              </div>
-            </div>
+            <CvItem
+              type={"studies"}
+              type={"studies"}
+              name={"Law"}
+              subtitle={"International"}
+              titleHover={"Bachelor Degree - UCM"}
+              description={"1 year studies in Italy"}
+              icon={"graduation-cap"}
+            />
+            <CvItem
+              type={"studies"}
+              name={"Entrepreneurship"}
+              subtitle={"Lean Startup | MVP"}
+              titleHover={"Deusto Business School"}
+              description={"Project semifinalist"}
+              icon={"graduation-cap"}
+            />
+            <CvItem
+              type={"studies"}
+              name={"Digital Marketing"}
+              subtitle={"Seo | Sem | Wordpress"}
+              titleHover={"Expert certificate - BAI"}
+              description={"Digital marketing 360"}
+              icon={"graduation-cap"}
+            />
+            <CvItem
+              type={"studies"}
+              name={"Front-end"}
+              subtitle={"Scrum | Agile | Git"}
+              titleHover={"Bootcamp - Adalab"}
+              description={"Html & Css | Js | React"}
+              icon={"graduation-cap"}
+            />
           </div>
           <div className="About__skills">
-            <div className="About__skills--item">
-              <h3>Information Planet</h3>
-              <span>
-                <span>Spain</span>
-                <span>Australia</span>
-              </span>
-              <div className="About__skills--hover">
-                <p>Sales & Operations</p>
-                <span>Manager</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>The Yellow Pocket</h3>
-              <span>Start-up</span>
-              <div className="About__skills--hover">
-                <p>Business 360</p>
-                <span>Founder</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>Mundo Joven</h3>
-              <span>
-                <span>Spain</span>
-                <span>Mexico</span>
-              </span>
-              <div className="About__skills--hover">
-                <p>Sales & Marketing</p>
-                <span>Country Manager</span>
-              </div>
-            </div>
-            <div className="About__skills--item">
-              <h3>Freelance</h3>
-              <span>Remote</span>
-              <div className="About__skills--hover">
-                <p>Code & Passion</p>
-                <span>Just me</span>
-              </div>
-            </div>
+            <CvItem
+              type={"work"}
+              type={"work"}
+              name={"Information Planet"}
+              subtitle={"Spain | Australia"}
+              titleHover={"Manager"}
+              description={"Sales & Operations"}
+              icon={"briefcase"}
+            />
+            <CvItem
+              type={"work"}
+              name={"The Yellow Pocket"}
+              subtitle={"Start-up"}
+              titleHover={"Founder"}
+              description={"Business 360"}
+              icon={"briefcase"}
+            />
+            <CvItem
+              type={"work"}
+              name={"Mundo Joven"}
+              subtitle={"Spain | Mexico"}
+              titleHover={"Country Manager"}
+              description={"Sales & Marketing"}
+              icon={"briefcase"}
+            />
+            <CvItem
+              type={"work"}
+              name={"Freelance"}
+              subtitle={"Remote"}
+              titleHover={"Code & Passion"}
+              description={"100% me"}
+              icon={"briefcase"}
+            />
           </div>
-          {/* <div className="more">Why you should hire me?</div> */}
-          {/* <a className="more" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a> */}
         </div>
 
       </div>
@@ -238,7 +200,3 @@ const About = () => {
 }
 
 export default About;
-
-
-// https://cssanimation.rocks/scroll-animations/
-// https://css-tricks.com/snippets/css/typewriter-effect/
