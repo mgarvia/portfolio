@@ -1,64 +1,75 @@
 [
   {
+    "Title": "Borja Santurino - 3D Architect",
+    "Web": "https://bsanturino.com/",
+    "Code": "",
+    "Image": "http://localhost:3000//images/Borja-santurino.png",
+    "Tags" : ["wordpress-simple", "css3-alt"],
+    "Color": "#E5AE47" ,
+    "Subtitle": "Lightbox design and development",
+    "Description": "Adjustment of lightbox according to given design in Wordpress"
+  },
+  {
     "Title": "Rick & Morty",
-    "Web": "http://beta.adalab.es/modulo-3-evaluacion-final-mgarvia/#/",
+    "Web": "https://mgarvia.github.io/rick-and-morty/",
     "Code": "https://github.com/mgarvia/modulo-3-evaluacion-final-mgarvia",
     "Image": "http://localhost:3000//images/Rick-and-Morty.png",
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#BAD74C",
     "Subtitle": "Api request in React project",
-    "Description": "Web application with React, API request, react-router and filters."
-  },
-  {
-    "Title": "Awesome Profile Cards",
-    "Web": "http://beta.adalab.es/project-promo-i-module-2-team-1-afternoon/",
-    "Code": "https://github.com/mgarvia/awesome-profile-cards?organization=mgarvia&organization=mgarvia",
-    "Image": "http://localhost:3000//images/Awesome_Profile_Cards.png",
-    "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "rgb(243, 82, 67)" ,
-    "Subtitle": "",
-    "Description": ""
-  }, 
-  {
-    "Title": "Collapsing Margins",
-    "Web": "http://beta.adalab.es/project-promo-i-module-1-team-3-afternoon-final/",
-    "Code": "https://github.com/mgarvia/collapsing-margins",
-    "Image": "http://localhost:3000//images/Collapsing_Margins.png",
-    "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "#129D8D",
-    "Subtitle": "",
-    "Description": ""
-  },
-  {
-    "Title": "Buscador Series & Películas",
-    "Web": "http://beta.adalab.es/modulo-2-evaluacion-final-mgarvia/",
-    "Code": "https://github.com/mgarvia/buscador-peliculas-series?organization=mgarvia&organization=mgarvia",
-    "Image": "http://localhost:3000//images/Buscador-peliculas-series.png",
-    "Tags" : ["html5", "css3-alt", "js-square"],
-    "Color": "rgb(97, 238, 224)" ,
-    "Subtitle": "",
-    "Description": ""
-  }, 
-  {
-    "Title": "Portfolio",
-    "Web": "",
-    "Code": "https://github.com/mgarvia/portfolio",
-    "Image": "http://localhost:3000//images/Portfolio.png",
-    "Tags" : ["css3-alt", "js-square", "react"],
-    "Color": "#FC2FB8" ,
-    "Subtitle": "",
-    "Description": ""
+    "Description": "Web application done with React, API connection, react-router and filters."
   },
   {
     "Title": "Reactive Palettes",
-    "Web": "http://beta.adalab.es/project-promo-i-module-3-team-4-afternoon/#/",
+    "Web": "https://mgarvia.github.io/reactive-palettes/#/",
     "Code": "https://github.com/mgarvia/reactive-palettes",
     "Image": "http://localhost:3000//images/Reactive-Palettes.png",
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#B677E6" ,
-    "Subtitle": "",
-    "Description": ""
+    "Subtitle": "Legacy code from JS6 to React",
+    "Description": "Code adaptation to React and demo application integrated in the project"
   },
+  {
+    "Title": "Collapsing Margins",
+    "Web": "https://mgarvia.github.io/collapsing-margins/",
+    "Code": "https://github.com/mgarvia/collapsing-margins",
+    "Image": "http://localhost:3000//images/Collapsing_Margins.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "#129D8D",
+    "Subtitle": "Responsive team website in html & css",
+    "Description": "Information website built with sass, transitions and animations"
+  },
+  {
+    "Title": "Awesome Profile Cards",
+    "Web": "https://mgarvia.github.io/awesome-profile-cards/",
+    "Code": "https://github.com/mgarvia/awesome-profile-cards?organization=mgarvia&organization=mgarvia",
+    "Image": "http://localhost:3000//images/Awesome_Profile_Cards.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "rgb(243, 82, 67)" ,
+    "Subtitle": "Customizable card generator",
+    "Description": "Card maker with form validation and webcam conexion shareable in Twitter"
+  }, 
+  {
+    "Title": "Buscador",
+    "Web": "https://mgarvia.github.io/buscador-peliculas-series/",
+    "Code": "https://github.com/mgarvia/buscador-peliculas-series?organization=mgarvia&organization=mgarvia",
+    "Image": "http://localhost:3000//images/Buscador-peliculas-series.png",
+    "Tags" : ["html5", "css3-alt", "js-square"],
+    "Color": "rgb(97, 238, 224)" ,
+    "Subtitle": "Film seeker & save to favourites",
+    "Description": "Web application with api connection, filters and Local Storage"
+  }, 
+  {
+    "Title": "Portfolio",
+    "Web": "https://github.com/mgarvia/portfolio",
+    "Code": "https://github.com/mgarvia/portfolio",
+    "Image": "http://localhost:3000//images/Portfolio.png",
+    "Tags" : ["css3-alt", "js-square", "react"],
+    "Color": "#FC2FB8" ,
+    "Subtitle": "Portfolio built with React",
+    "Description": "Projects portfolio in React & sass with BEM methodology"
+  },
+
   {
     "Title": "Gestor de proyectos",
     "Web": "",
@@ -66,8 +77,8 @@
     "Image": "http://localhost:3000//images/Gestor-de-proyectos.png",
     "Tags" : ["html5", "css3-alt", "js-square"],
     "Color": "#0077FF" ,
-    "Subtitle": "",
-    "Description": ""
+    "Subtitle": "Lists, cards & tasks generator",
+    "Description": "Kanban application, with JS6 and Local Storage"
   }, 
   {
     "Title": "CRUD",
@@ -76,8 +87,8 @@
     "Image": "http://localhost:3000//images/Crud.png",
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#3EB1C8" ,
-    "Subtitle": "",
-    "Description": ""
+    "Subtitle": "Products crud with login in React",
+    "Description": "Products crud accesible with authentication form. Create, edit and remove products."
   },
   {
     "Title": "Anonymous Proxy",
@@ -85,9 +96,9 @@
     "Code": "https://github.com/mgarvia/modulo-1-evaluacion-final-mgarvia",
     "Image": "http://localhost:3000//images/Anonymous-Proxy.png",
     "Tags" : ["html5", "css3-alt"],
-    "Color": "rgb(223, 91, 65)" ,
-    "Subtitle": "",
-    "Description": ""
+    "Color": "#F26002" ,
+    "Subtitle": "Responsive mobile first html & css",
+    "Description": "Responsive layout with mobile first design."
   },
   {
     "Title": "Salsa con Andy",
@@ -96,28 +107,19 @@
     "Image": "http://localhost:3000//images/Salsa-con-andy.png",
     "Tags" : ["wordpress-simple"],
     "Color": "#F56457" ,
-    "Subtitle": "",
-    "Description": ""
+    "Subtitle": "Salsa classes website in Wordpress",
+    "Description": "Design and development of simple website in Wordpress"
   },
-  {
-    "Title": "Borja Santurino - 3D Architect",
-    "Web": "https://bsanturino.com/",
-    "Code": "",
-    "Image": "http://localhost:3000//images/Borja-santurino.png",
-    "Tags" : ["wordpress-simple", "css3-alt"],
-    "Color": "#E5AE47" ,
-    "Subtitle": "",
-    "Description": ""
-  },
+
   {
     "Title": "Datadesk",
     "Web": "https://datadesk.es/",
     "Code": "",
     "Image": "http://localhost:3000//images/Datadesk.png",
     "Tags" : ["wordpress-simple"],
-    "Color": "#121D3B" ,
-    "Subtitle": "",
-    "Description": ""
+    "Color": "#FFC300" ,
+    "Subtitle": "Responsive website for law firm",
+    "Description": "Services and contact website developed in Wordpress with given design"
   }
 
 ]

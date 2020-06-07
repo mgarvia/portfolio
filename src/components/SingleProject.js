@@ -16,8 +16,14 @@ const SingleProject = props => {
         <h3 className="SingleProject__subtitle">{subtitle}</h3>
         <p className="SingleProject__description">{description}</p>
         <div className="SingleProject__links">
-          <a href={web} target="blank" title="Click to visit the web">Visit the web</a>
-          <a href={code} target="blank" title="Click to check the code">Check the code</a>
+          {web !== ""
+            ? <a href={web} target="blank" title="Click to visit the web">Visit the web</a>
+            : <div></div>
+          }
+          {code !== ""
+            ? <a href={code} target="blank" title="Click to check the code">Check the code</a>
+            : <div></div>
+          }
         </div>
         <div className="SingleProject__tags">
           {tags.map((tag, index) =>
