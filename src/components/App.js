@@ -109,7 +109,7 @@ class App extends React.Component {
           <About />
           <Quote
             id={'CV'}
-            bgUrl={"http://localhost:3000//images/Trabajo-en-equipo.jpg"}
+            bgUrl={"https://mgarvia.github.io/portfolio/images/Trabajo-en-equipo.jpg"}
             flex={'column'}
             colorTitle={'white'}
             quote={"Why should you work with me?"}

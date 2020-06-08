@@ -1,4 +1,4 @@
-<a href="http://localhost:3000//images/Portfolio.png" alt="Maria Garvia portfolio" title="Maria Garvia portfolio"> </a>
+<a href="https://mgarvia.github.io/portfolio/images/Portfolio.png" alt="Maria Garvia portfolio" title="Maria Garvia portfolio"> </a>
 
 # Maria Garvia portfolio
 
@@ -13,7 +13,7 @@
 - React
 - Git
 
-[(http://localhost:3000//images/readme.png)]()
+[(https://mgarvia.github.io/portfolio/images/readme.png)]()
 
 ---
 
@@ -43,7 +43,7 @@
 ## Cv
 
 🎓 Wanna know more about me? 
-<a className="cv-download" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>
+<a className="cv-download" href="https://mgarvia.github.io/portfolio/images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>
 
 ---
 

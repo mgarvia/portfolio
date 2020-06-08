@@ -64,19 +64,19 @@ const About = () => {
   return (
     <section className="About" id="About">
       <div className="About__icons">
-        <img alt="icono react" src="http://localhost:3000//images/react.png" />
-        <img alt="icono html5" src="http://localhost:3000//images/html5.png" />
-        <img alt="icono css3" src="http://localhost:3000//images/css3.png" />
-        <img alt="icono sass" src="http://localhost:3000//images/sass.png" />
-        <img alt="icono javascript" src="http://localhost:3000//images/js.png" />
-        <img alt="icono wordpress" src="http://localhost:3000//images/wordpress.png" />
-        <img alt="icono git" src="http://localhost:3000//images/git.png" />
-        <img alt="icono visual studio code" src="http://localhost:3000//images/visual-studio-code.png" />
-        <img alt="icono zeplin" src="http://localhost:3000//images/zeplin.png" />
-        <img alt="icono slack" src="http://localhost:3000//images/slack.png" />
-        <img alt="icono github" src="http://localhost:3000//images/github.png" />
-        <img alt="icono trello" src="http://localhost:3000//images/trello.png" />
-        <img alt="icono gulp" src="http://localhost:3000//images/gulp.png" />
+        <img alt="icono react" src="https://mgarvia.github.io/portfolio/images/react.png" />
+        <img alt="icono html5" src="https://mgarvia.github.io/portfolio/images/html5.png" />
+        <img alt="icono css3" src="https://mgarvia.github.io/portfolio/images/css3.png" />
+        <img alt="icono sass" src="https://mgarvia.github.io/portfolio/images/sass.png" />
+        <img alt="icono javascript" src="https://mgarvia.github.io/portfolio/images/js.png" />
+        <img alt="icono wordpress" src="https://mgarvia.github.io/portfolio/images/wordpress.png" />
+        <img alt="icono git" src="https://mgarvia.github.io/portfolio/images/git.png" />
+        <img alt="icono visual studio code" src="https://mgarvia.github.io/portfolio/images/visual-studio-code.png" />
+        <img alt="icono zeplin" src="https://mgarvia.github.io/portfolio/images/zeplin.png" />
+        <img alt="icono slack" src="https://mgarvia.github.io/portfolio/images/slack.png" />
+        <img alt="icono github" src="https://mgarvia.github.io/portfolio/images/github.png" />
+        <img alt="icono trello" src="https://mgarvia.github.io/portfolio/images/trello.png" />
+        <img alt="icono gulp" src="https://mgarvia.github.io/portfolio/images/gulp.png" />
       </div>
       <div className="About__section">
         <div className="About__header section__header">
