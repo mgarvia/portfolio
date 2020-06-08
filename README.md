@@ -1,4 +1,4 @@
-<a href="https://mgarvia.github.io/portfolio" alt="Maria Garvia portfolio" title="Maria Garvia portfolio">![]("https://mgarvia.github.io/portfolio/images/Portfolio.png")</a>
+<a href="https://mgarvia.github.io/portfolio" alt="Maria Garvia portfolio" title="Maria Garvia portfolio">![Portfolio]("https://mgarvia.github.io/portfolio/images/Portfolio.png")</a>
 
 # Maria Garvia portfolio
 
@@ -13,7 +13,7 @@
 - React
 - Git
 
-![]("https://mgarvia.github.io/portfolio/images/readme.png")
+![readme]("https://mgarvia.github.io/portfolio/images/readme.png")
 
 ---
 
