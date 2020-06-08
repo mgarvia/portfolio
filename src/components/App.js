@@ -34,23 +34,23 @@ class App extends React.Component {
     })
   }
 
-  toogleMenu = () => document.querySelectorAll('.toggleMenu').forEach(item => item.addEventListener('click', this.toggleIsActive));
+  smoothScroll = () => {
+    let buttons = document.querySelectorAll('.smoothScroll');
+    buttons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = e.currentTarget.getAttribute('href');
+
+        document.querySelector(target).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
 
   toggleIsActive = () => document.querySelectorAll('.hamburger, .Menu__links').forEach(item => item.classList.toggle('is-active'));
 
-  updateProjects = item => {
-    const { projects } = this.state
-
-    const showProjects = projects.filter(project => project.Tags.includes(item.id));
-
-    console.log(item.id)
-    console.log(showProjects)
-
-    if (!item.classList.contains('is-active')) {
-      console.log('no')
-    }
-
-  }
+  toogleMenu = () => document.querySelectorAll('.toggleMenu').forEach(item => item.addEventListener('click', this.toggleIsActive));
 
   updateFilter = item => {
     if (item.innerHTML === "All") {
@@ -73,20 +73,6 @@ class App extends React.Component {
         [item.innerHTML]: true
       })
     }
-  }
-
-  smoothScroll = () => {
-    let buttons = document.querySelectorAll('.smoothScroll');
-    buttons.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        let target = e.currentTarget.getAttribute('href');
-
-        document.querySelector(target).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
   }
 
   render() {

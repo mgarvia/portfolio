@@ -4,7 +4,7 @@ import '../stylesheets/Footer.scss'
 const Footer = () => {
   return (
     <div className="Footer">
-      Created by Mawi
+      Created by Mawii
     </div>
   )
 }

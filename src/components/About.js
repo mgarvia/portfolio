@@ -125,7 +125,6 @@ const About = () => {
           <div className="About__skills">
             <CvItem
               type={"studies"}
-              type={"studies"}
               name={"Law"}
               subtitle={"International"}
               titleHover={"Bachelor Degree - UCM"}
@@ -159,7 +158,6 @@ const About = () => {
           </div>
           <div className="About__skills">
             <CvItem
-              type={"work"}
               type={"work"}
               name={"Information Planet"}
               subtitle={"Spain | Australia"}

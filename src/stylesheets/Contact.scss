@@ -3,40 +3,8 @@
 
 .Contact {
   border-left: 3px solid $colorContact;
-  // background-color: red;
   min-height: 50vh;
   position: relative;
-  // width: 100vw;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-
-  // .circles {
-  //   div {
-  //     width: 20px;
-  //     height: 20px;
-  //     background: red;
-  //     border-radius: 50px;
-  //     position: absolute;
-
-  //     &:nth-child(1) {
-  //       background: purple;
-  //       right: 35px;
-  //       top: 25px;
-  //     }
-  //     &:nth-child(2) {
-  //       background: green;
-  //       right: 50px;
-  //       top: 30px;
-  //     }
-  //     &:nth-child(3) {
-  //       background: blue;
-  //       right: 37px;
-  //       top: 40px;
-  //     }
-  //   }
-  // }
 }
 
 #contact-info {
@@ -103,19 +71,14 @@
         width: 100%;
         height: 100%;
         transition: 0.5s;
-        /* transition-property: opacity, transform;
-        transition-duration: 0.5s; */
         border: 1px solid $colorContact;
-        /* border-color: $colorContact; */
         border-radius: 5px;
 
         &:nth-child(5) {
           display: flex;
           justify-content: center;
           align-items: center;
-
           position: relative;
-          /* border-color: $colorContact; */
         }
       }
 

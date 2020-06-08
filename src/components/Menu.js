@@ -11,7 +11,7 @@ const Menu = () => {
           </div>
         </button>
       </div>
-      <nav >
+      <nav>
         <ul className="Menu__links">
           <li className="toggleMenu Menu__links--projects" ><a className="smoothScroll" href="#Projects">Proyects</a></li>
           <li className="toggleMenu Menu__links--about" ><a className="smoothScroll" href="#About">About</a></li>

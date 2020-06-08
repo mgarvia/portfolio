@@ -81,9 +81,9 @@
             transform 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19),
             width 0s ease 0.25s;
 
-            @include forTablet {
-              bottom: -10px;
-            }
+          @include forTablet {
+            bottom: -10px;
+          }
         }
       }
 
@@ -114,10 +114,8 @@
       }
     }
   }
-
+  
   &__links {
-    background: url("https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-      center;
     background-size: cover;
     height: 100vh;
     width: 100vw;
