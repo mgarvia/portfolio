@@ -13,7 +13,7 @@
 - React
 - Git
 
-![](https://mgarvia.github.io/portfolio/images/readme.png)
+<a href="https://mgarvia.github.io/portfolio" alt="Maria Garvia portfolio" title="Maria Garvia portfolio">![](https://mgarvia.github.io/portfolio/images/readme.png)</a>
 
 ---
 
