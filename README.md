@@ -51,7 +51,7 @@
 
 Don't be shy and get in contact!
 
-📧 E-mail at <a href="http://fvcproductions.com" target="_blank">`maria.garvia.soler@gmail.com`</a>
+📧 E-mail at <a href="mailto:maria.garvia.soler@gmail.com" target="_blank">`maria.garvia.soler@gmail.com`</a>
 
 📧 Linkedin at <a href="https://www.linkedin.com/in/mariagarviasoler/" target="_blank">`@mariagarviasoler`</a>
 
