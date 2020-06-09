@@ -41,7 +41,7 @@ class App extends React.Component {
         language: "EN"
       })
     }
-    this.updateLanguageBtn()
+    setTimeout(this.updateLanguageBtn, 1000)
   }
 
   smoothScroll = () => {
@@ -58,11 +58,11 @@ class App extends React.Component {
     });
   }
 
+  updateLanguageBtn = () => this.state.language === "ES" ? document.querySelector('.btn-ES').classList.add('is-active') : document.querySelector('.btn-EN').classList.add('is-active');
+
   toggleIsActive = () => document.querySelectorAll('.hamburger, .Menu__links').forEach(item => item.classList.toggle('is-active'));
 
   toogleMenu = () => document.querySelectorAll('.toggleMenu').forEach(item => item.addEventListener('click', this.toggleIsActive));
-
-  updateLanguageBtn = () => this.state.language === "ES" ? document.querySelector('.btn-ES').classList.add('is-active') : document.querySelector('.btn-EN').classList.add('is-active');
 
   updateLanguage = language => this.setState({ language: language })
 
