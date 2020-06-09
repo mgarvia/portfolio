@@ -14,7 +14,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: data,
+      language: "EN",
       projects: data,
       Html: false,
       Css: false,
@@ -31,7 +31,17 @@ class App extends React.Component {
       Javascript: false,
       react: false,
       Wordpress: false,
-    })
+    });
+    if (window.navigator.language === "es-ES") {
+      this.setState({
+        language: "ES"
+      })
+    } else {
+      this.setState({
+        language: "EN"
+      })
+    }
+    this.updateLanguageBtn()
   }
 
   smoothScroll = () => {
@@ -51,6 +61,10 @@ class App extends React.Component {
   toggleIsActive = () => document.querySelectorAll('.hamburger, .Menu__links').forEach(item => item.classList.toggle('is-active'));
 
   toogleMenu = () => document.querySelectorAll('.toggleMenu').forEach(item => item.addEventListener('click', this.toggleIsActive));
+
+  updateLanguageBtn = () => this.state.language === "ES" ? document.querySelector('.btn-ES').classList.add('is-active') : document.querySelector('.btn-EN').classList.add('is-active');
+
+  updateLanguage = language => this.setState({ language: language })
 
   updateFilter = item => {
     if (item.innerHTML === "All") {
@@ -76,15 +90,18 @@ class App extends React.Component {
   }
 
   render() {
-    const { projects, filter, Html, Css, Javascript, react, Wordpress } = this.state;
-    const { updateFilter, smoothScroll, toogleMenu } = this;
+    const { projects, filter, Html, Css, Javascript, react, Wordpress, language } = this.state;
+    const { updateLanguage, updateFilter, smoothScroll, toogleMenu } = this;
 
     smoothScroll()
     toogleMenu()
 
     return (
       <div className="App" >
-        <Header />
+        <Header
+          language={language}
+          updateLanguage={updateLanguage}
+        />
         <main>
           <Quote
             id={'love-coding'}
@@ -97,6 +114,7 @@ class App extends React.Component {
             }
           />
           <Projects
+            language={language}
             projects={projects}
             filter={filter}
             updateFilter={updateFilter}
@@ -106,19 +124,36 @@ class App extends React.Component {
             react={react}
             wp={Wordpress}
           />
-          <About />
-          <Quote
-            id={'CV'}
-            bgUrl={"https://mgarvia.github.io/portfolio/images/Trabajo-en-equipo.jpg"}
-            flex={'column'}
-            colorTitle={'white'}
-            quote={"Why should you work with me?"}
-            children={<a className="cv-download" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer.pdf" download>Download my CV</a>}
+          <About
+            language={language}
           />
-          <Contact />
+
+          {language === "EN"
+            ? <Quote
+              id={'CV'}
+              bgUrl={"https://mgarvia.github.io/portfolio/images/Trabajo-en-equipo.jpg"}
+              flex={'column'}
+              colorTitle={'white'}
+              quote={"Why should you work with me?"}
+              children={<a className="cv-download" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer(EN).pdf" download>Download my CV</a>}
+            />
+            : <Quote
+              id={'CV'}
+              bgUrl={"https://mgarvia.github.io/portfolio/images/Trabajo-en-equipo.jpg"}
+              flex={'column'}
+              colorTitle={'white'}
+              quote={"¿Por qué trabajar conmigo?"}
+              children={<a className="cv-download" href="http://localhost:3000//images/Maria_Garvia_CV_Frontend_Developer(ES).pdf" download>Descarga mi CV</a>}
+            />
+          }
+          <Contact
+            language={language}
+          />
         </main>
         <footer>
-          <Footer />
+          <Footer
+            language={language}
+          />
         </footer>
         <ScrollBtn />
       </div>

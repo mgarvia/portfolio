@@ -56,7 +56,7 @@
 
     .picture {
       height: 100px;
-      background: url("https://mgarvia.github.io/portfolio/images/picture_maria_garvia.png")
+      background: url("https://mgarvia.github.io/portfolio//images/picture_maria_garvia.png")
         top no-repeat;
       background-size: contain;
       @include forPc {
@@ -207,7 +207,7 @@
     }
 
     @include forPc {
-      font-size: 45px;
+      font-size: 42px;
     }
   }
 

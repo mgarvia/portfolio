@@ -1,9 +1,8 @@
 import React from 'react';
 
 const SingleProject = props => {
-  const { title, subtitle, web, code, tags, image, color, description } = props; const setBgColor = () => document.querySelectorAll('.Projects__grid--item').forEach(project => project.style.background = { color });
-
-
+  const { language, title, subtitle, web, code, tags, image, color, description } = props;
+  const setBgColor = () => document.querySelectorAll('.Projects__grid--item').forEach(project => project.style.background = { color });
 
   setBgColor();
 
@@ -16,13 +15,21 @@ const SingleProject = props => {
         <h3 className="SingleProject__subtitle">{subtitle}</h3>
         <p className="SingleProject__description">{description}</p>
         <div className="SingleProject__links">
-          {web !== ""
+          {web !== "" && language === "EN"
             ? <a href={web} target="blank" title="Click to visit the web">Visit the web</a>
-            : <div></div>
+            : ""
           }
-          {code !== ""
+          {web !== "" && language !== "EN"
+            ? <a href={web} target="blank" title="Click to visit the web">Visitar la web</a>
+            : ""
+          }
+          {code !== "" && language === "EN"
             ? <a href={code} target="blank" title="Click to check the code">Check the code</a>
-            : <div></div>
+            : ""
+          }
+          {code !== "" && language !== "EN"
+            ? <a href={code} target="blank" title="Click to check the code">Ver el código</a>
+            : ""
           }
         </div>
         <div className="SingleProject__tags">

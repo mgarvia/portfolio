@@ -3,6 +3,37 @@
 .Menu {
   position: relative;
 
+  &__language {
+    z-index: 9;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &--button {
+      height: 100%;
+      width: 50%;
+      background-color: transparent;
+      border-radius: 25px;
+      border: 2px solid white;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    .is-active{
+      background-color: $colorHeader;
+      color: white;
+    }
+  }
+
   &__hamburguer {
     position: absolute;
     top: 0;

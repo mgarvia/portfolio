@@ -107,10 +107,6 @@
         border-top: 3px solid white;
         border-bottom: 3px solid white;
 
-        * {
-          margin: 2px;
-        }
-
         @include forPc {
           font-size: 16px;
           height: 100%;
@@ -135,7 +131,14 @@
             }
 
             &__links {
-              margin: 20px 0;
+              padding: 20px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 100%;
+
               a {
                 color: white;
               }
@@ -143,12 +146,14 @@
 
             &__tags {
               position: absolute;
-              bottom: 10px;
-              right: 10px;
+              bottom: 5px;
+              right: 5px;
+              
 
               i {
-                margin: 5px;
-                font-size: 25px;
+                margin: 3px;
+                font-size: 20px;
+                color: whitesmoke;
 
                 &:hover {
                   opacity: 0.6;
@@ -160,6 +165,10 @@
           .fa-sort-down {
             display: none;
           }
+        }
+
+        * {
+          margin: 2px;
         }
 
         h2,
@@ -187,7 +196,6 @@
 
       &__links {
         a {
-          margin: 20px;
           text-transform: uppercase;
           color: $colorProjects;
           &:hover {

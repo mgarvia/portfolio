@@ -1,10 +1,16 @@
 import React from 'react';
 import '../stylesheets/Footer.scss'
 
-const Footer = () => {
+const Footer = props => {
+  const { language } = props;
+
   return (
     <div className="Footer">
-      Created by Mawii
+      {language === "EN"
+        ? "Created by Mawii "
+        : "Creada por Mawii "
+      }
+      <img className="mawii" alt="Mawii" src="./images/mawii.png" />
     </div>
   )
 }

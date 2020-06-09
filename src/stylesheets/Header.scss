@@ -69,7 +69,7 @@
 
       &__welcome {
         font-size: 20px;
-        width: 245px;
+        width: 248px;
         display: inline-block;
         border-right: 2px solid rgba(255, 255, 255, 0.75);
         text-align: center;
@@ -84,7 +84,13 @@
 
         @include forTablet {
           font-size: 33px;
-          width: 399px;
+          width: 400px;
+        }
+
+        &--ES {
+          @include forTablet {
+            width: 410px;
+          }
         }
       }
 
@@ -170,7 +176,17 @@
             width: 640px;
           }
           & p:nth-child(3) {
-            width: 390px;
+            width: 395px;
+          }
+
+          & .text__description--ES:nth-child(1) {
+            width: 640px;
+          }
+          & .text__description--ES:nth-child(2) {
+            width: 939px;
+          }
+          & .text__description--ES:nth-child(3) {
+            width: 530px;
           }
         }
 
@@ -200,7 +216,7 @@
           }
 
           & p:nth-child(3) {
-            width: 390px;
+            width: 395px;
             -webkit-animation: type steps(40, end);
             animation: type steps(40, end);
             -webkit-animation-fill-mode: forwards;
@@ -292,7 +308,7 @@
             box-sizing: border-box;
 
             @include forTablet {
-              top: 10px
+              top: 10px;
             }
           }
         }

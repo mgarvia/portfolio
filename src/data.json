@@ -1,13 +1,15 @@
 [
   {
-    "Title": "Borja Santurino - 3D Architect",
+    "Title": "Borja Santurino",
     "Web": "https://bsanturino.com/",
     "Code": "",
     "Image": "https://mgarvia.github.io/portfolio/images/Borja-santurino.png",
     "Tags" : ["wordpress-simple", "css3-alt"],
     "Color": "#E5AE47" ,
-    "Subtitle": "Lightbox design and development",
-    "Description": "Adjustment of lightbox according to given design in Wordpress"
+    "Subtitle": "3D rendering architect",
+    "Description": "Design and development of lightbox in Wordpress",
+    "SubtitleES": "Arquitecto render 3D",
+    "DescriptionES": "Diseño y desarrollo de lightbox en Wordpress"
   },
   {
     "Title": "Rick & Morty",
@@ -17,7 +19,9 @@
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#BAD74C",
     "Subtitle": "Api request in React project",
-    "Description": "Web application done with React, API connection, react-router and filters."
+    "Description": "Web application done with React, API connection, react-router and filters.",
+    "SubtitleES": "Llamada a API en proyecto React",
+    "DescriptionES": "Aplicación web hecha con React, conexión API, react-router y filtros"
   },
   {
     "Title": "Reactive Palettes",
@@ -26,8 +30,10 @@
     "Image": "https://mgarvia.github.io/portfolio/images/Reactive-Palettes.png",
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#B677E6" ,
-    "Subtitle": "Legacy code from JS6 to React",
-    "Description": "Code adaptation to React and demo application integrated in the project"
+    "Subtitle": "Legacy code from JS-E6 to React",
+    "Description": "Code refactoring to React and demo application integrated in the project",
+    "SubtitleES": "Código heredado de JS-E6 a React",
+    "DescriptionES": "Refactorización de código a React y aplicación demo integrada en el proyecto"
   },
   {
     "Title": "Collapsing Margins",
@@ -37,7 +43,9 @@
     "Tags" : ["html5", "css3-alt", "js-square"],
     "Color": "#129D8D",
     "Subtitle": "Responsive team website in html & css",
-    "Description": "Information website built with sass, transitions and animations"
+    "Description": "Information website built with sass, transitions and animations",
+    "SubtitleES": "Web de equipo responsive en html & css",
+    "DescriptionES": "Web informativa creada con sass, transiciones y animaciones"
   },
   {
     "Title": "Awesome Profile Cards",
@@ -47,7 +55,9 @@
     "Tags" : ["html5", "css3-alt", "js-square"],
     "Color": "rgb(243, 82, 67)" ,
     "Subtitle": "Customizable card generator",
-    "Description": "Card maker with form validation and webcam conexion shareable in Twitter"
+    "Description": "Card maker with form validation and webcam conexion shareable in Twitter",
+    "SubtitleES": "Generador de tarjetas personalizables",
+    "DescriptionES": "Aplicación para crear tarjetas, validación de formulario, webcam conexión a Twitter"
   }, 
   {
     "Title": "Buscador",
@@ -57,7 +67,9 @@
     "Tags" : ["html5", "css3-alt", "js-square"],
     "Color": "rgb(97, 238, 224)" ,
     "Subtitle": "Film seeker & save to favourites",
-    "Description": "Web application with api connection, filters and Local Storage"
+    "Description": "Web application with API connection, filters and Local Storage",
+    "SubtitleES": "Buscador de películas & favoritos",
+    "DescriptionES": "APlicación web con conexión API, filtros y Local Storage"
   }, 
   {
     "Title": "Portfolio",
@@ -67,7 +79,9 @@
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#FC2FB8" ,
     "Subtitle": "Portfolio built with React",
-    "Description": "Projects portfolio in React & sass with BEM methodology"
+    "Description": "Projects portfolio in React & Sass with BEM methodology",
+    "SubtitleES": "Portfolio creado con React",
+    "DescriptionES": "Proyectos de portfolio en React, & Sass con metodología BEM"
   },
 
   {
@@ -78,7 +92,9 @@
     "Tags" : ["html5", "css3-alt", "js-square"],
     "Color": "#0077FF" ,
     "Subtitle": "Lists, cards & tasks generator",
-    "Description": "Kanban application, with JS6 and Local Storage"
+    "Description": "Kanban application, with JS-E6, advanced DOM and Local Storage",
+    "SubtitleES": "Generador de listas, tarjetas & tareas",
+    "DescriptionES": "Aplicación Kanban, con JS-E6, DOM avanzado y Local Storage"
   }, 
   {
     "Title": "CRUD",
@@ -88,7 +104,9 @@
     "Tags" : ["css3-alt", "js-square", "react"],
     "Color": "#3EB1C8" ,
     "Subtitle": "Products crud with login in React",
-    "Description": "Products crud accesible with authentication form. Create, edit and remove products."
+    "Description": "Products crud accesible with authentication form. Create, edit and remove products.",
+    "SubtitleES": "Crud de productos con login en React",
+    "DescriptionES": "Crud de productos con formulario de acceso. Crear, editar y eliminar productos."
   },
   {
     "Title": "Anonymous Proxy",
@@ -98,7 +116,9 @@
     "Tags" : ["html5", "css3-alt"],
     "Color": "#F26002" ,
     "Subtitle": "Responsive mobile first html & css",
-    "Description": "Responsive layout with mobile first design."
+    "Description": "Responsive layout with mobile first design.",
+    "SubtitleES": "Responsive mobile first html & css",
+    "DescriptionES": "Maquetación responsive con diseño mobile first"
   },
   {
     "Title": "Salsa con Andy",
@@ -108,7 +128,9 @@
     "Tags" : ["wordpress-simple"],
     "Color": "#F56457" ,
     "Subtitle": "Salsa classes website in Wordpress",
-    "Description": "Design and development of simple website in Wordpress"
+    "Description": "Design and development of simple website in Wordpress",
+    "SubtitleES": "Profesor de clases de salsa",
+    "DescriptionES": "Diseño y desarrollo de página web sencilla en Wordpress"
   },
 
   {
@@ -119,7 +141,8 @@
     "Tags" : ["wordpress-simple"],
     "Color": "#FFC300" ,
     "Subtitle": "Responsive website for law firm",
-    "Description": "Services and contact website developed in Wordpress with given design"
+    "Description": "Services and contact website developed in Wordpress with given design",
+    "SubtitleES": "Abogados en protección de datos",
+    "DescriptionES": "Web corporativa desarrollaga en Wordpress según diseño dado"
   }
-
 ]

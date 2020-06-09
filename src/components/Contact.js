@@ -2,12 +2,16 @@ import React from 'react';
 import SocialIcon from './SocialIcon';
 import '../stylesheets/Contact.scss'
 
-const Contact = () => {
+const Contact = props => {
+  const {language} = props;
 
   return (
     <div className="Contact" id="Contact">
       <div className="About__header section__header">
-        <h2 className="section__header--title">Lets' talk</h2>
+        {language === "EN"
+          ? <h2 className="section__header--title">Lets' talk</h2>
+          : <h2 className="section__header--title">Hablemos</h2>
+        }
       </div>
       <div id='contact-info'>
         <div className='links'>
