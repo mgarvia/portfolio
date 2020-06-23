@@ -77,7 +77,7 @@
     "Code": "https://github.com/mgarvia/portfolio",
     "Image": "https://mgarvia.github.io/portfolio/images/Portfolio.png",
     "Tags" : ["css3-alt", "js-square", "react"],
-    "Color": "#FC2FB8" ,
+    "Color": "#FCF510" ,
     "Subtitle": "Portfolio built with React",
     "Description": "Projects portfolio in React & Sass with BEM methodology",
     "SubtitleES": "Portfolio creado con React",
