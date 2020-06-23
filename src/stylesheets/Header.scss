@@ -3,8 +3,10 @@
 
 .Header {
   &__content {
-    background: url("https://mgarvia.github.io/portfolio/images/bg-header.jpeg")
-      center no-repeat;
+    background: url("/images/bg-header.png")
+    // ("https://mgarvia.github.io/portfolio/images/bg-header.jpeg")
+      // center 
+      no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -96,7 +98,7 @@
 
       .typing {
         @include forPc {
-          border-right: 2px solid rgba(255, 255, 255, 0.75);
+          // border-right: 2px solid rgba(255, 255, 255, 0.75);
           text-align: center;
           white-space: nowrap;
           overflow: hidden;
@@ -109,28 +111,28 @@
       }
 
       &__front {
-        color: cyan;
+        color: $colorHeaderFonts;
       }
 
-      &__junior {
-        font-size: 12px;
-        position: relative;
-        top: -5px;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.479);
-        text-align: right;
-        opacity: 0;
-        -webkit-animation: opacity 1s steps(20, end);
-        animation: opacity 1s steps(20, end);
-        -webkit-animation-delay: 2s;
-        animation-delay: 2s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
+      // &__junior {
+      //   font-size: 12px;
+      //   position: relative;
+      //   top: -5px;
+      //   text-transform: uppercase;
+      //   color: $colorScroll;
+      //   text-align: right;
+      //   opacity: 0;
+      //   -webkit-animation: opacity 1s steps(20, end);
+      //   animation: opacity 1s steps(20, end);
+      //   -webkit-animation-delay: 2s;
+      //   animation-delay: 2s;
+      //   -webkit-animation-fill-mode: forwards;
+      //   animation-fill-mode: forwards;
 
-        @include forTablet {
-          font-size: 15px;
-        }
-      }
+      //   @include forTablet {
+      //     font-size: 15px;
+      //   }
+      // }
 
       &__description {
         font-size: 14px;
@@ -156,16 +158,16 @@
         }
 
         & p:nth-child(1) {
-          -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+          -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
         }
         & p:nth-child(2) {
-          -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
+          -webkit-animation-delay: 4s;
+          animation-delay: 4s;
         }
         & p:nth-child(3) {
-          -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+          -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
         }
 
         @include forTablet {
@@ -179,52 +181,52 @@
             width: 395px;
           }
 
-          & .text__description--ES:nth-child(1) {
-            width: 640px;
-          }
-          & .text__description--ES:nth-child(2) {
-            width: 939px;
-          }
-          & .text__description--ES:nth-child(3) {
-            width: 530px;
-          }
+          // & .text__description--ES:nth-child(1) {
+          //   width: 640px;
+          // }
+          // & .text__description--ES:nth-child(2) {
+          //   width: 939px;
+          // }
+          // & .text__description--ES:nth-child(3) {
+          //   width: 530px;
+          // }
         }
 
         @include forPc {
           & p:nth-child(1) {
-            width: 490px;
-            -webkit-animation: type steps(40, end);
-            animation: type steps(40, end);
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-            -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-            -webkit-animation-delay: 3s;
-            animation-delay: 3s;
+            width: 640px;
+            // -webkit-animation: type steps(40, end);
+            // animation: type steps(40, end);
+            // -webkit-animation-fill-mode: forwards;
+            // animation-fill-mode: forwards;
+            // -webkit-animation-duration: 3s;
+            // animation-duration: 3s;
+            // -webkit-animation-delay: 3s;
+            // animation-delay: 3s;
           }
 
           & p:nth-child(2) {
-            width: 850px;
-            -webkit-animation: type steps(40, end);
-            animation: type steps(40, end);
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-delay: 6.5s;
-            animation-delay: 6.5s;
+            width: 939px;
+            // -webkit-animation: type steps(40, end);
+            // animation: type steps(40, end);
+            // -webkit-animation-fill-mode: forwards;
+            // animation-fill-mode: forwards;
+            // -webkit-animation-duration: 4s;
+            // animation-duration: 4s;
+            // -webkit-animation-delay: 6.5s;
+            // animation-delay: 6.5s;
           }
 
           & p:nth-child(3) {
-            width: 395px;
-            -webkit-animation: type steps(40, end);
-            animation: type steps(40, end);
-            -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            -webkit-animation-delay: 11s;
-            animation-delay: 11s;
+            width: 530px;
+            // -webkit-animation: type steps(40, end);
+            // animation: type steps(40, end);
+            // -webkit-animation-fill-mode: forwards;
+            // animation-fill-mode: forwards;
+            // -webkit-animation-duration: 2s;
+            // animation-duration: 2s;
+            // -webkit-animation-delay: 11s;
+            // animation-delay: 11s;
           }
         }
       }
@@ -238,22 +240,17 @@
       animation: opacity 1s steps(20, end);
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      -webkit-animation-delay: 8.5s;
-      animation-delay: 9.5s;
+      -webkit-animation-delay: 6.5s;
+      animation-delay: 6.5s;
 
       @include forTablet {
         bottom: 50px;
       }
 
-      @include forPc {
-        -webkit-animation-delay: 13.5s;
-        animation-delay: 13.5s;
-      }
-
       a {
         padding-top: 45px;
         font-size: 14px;
-        color: rgba(255, 255, 255, 0.479);
+        color: $colorScroll;
         display: inline-block;
 
         @include forTablet {
@@ -268,7 +265,7 @@
           width: 24px;
           height: 39px;
           margin-left: -15px;
-          border: 2px solid rgba(255, 255, 255, 0.479);
+          border: 2px solid $colorScroll;
           border-radius: 50px;
           box-sizing: border-box;
 
@@ -286,7 +283,7 @@
               margin-left: -9px;
               border-left: 1px solid;
               border-bottom: 1px solid;
-              border-color: rgba(255, 255, 255, 0.479);
+              border-color: $colorScroll;
               -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
               box-sizing: border-box;

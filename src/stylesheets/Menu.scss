@@ -27,8 +27,8 @@
       outline: none;
       cursor: pointer;
     }
-    
-    .is-active{
+
+    .is-active {
       background-color: $colorHeader;
       color: white;
     }
@@ -61,6 +61,11 @@
         right: 0;
         &:hover {
           opacity: 0.7;
+        }
+        .hamburger-inner,
+        .hamburger-inner:after,
+        .hamburger-inner:before {
+          background-color: $colorHeaderFonts;
         }
       }
 
@@ -145,8 +150,9 @@
       }
     }
   }
-  
+
   &__links {
+    background: url("/images/bg-menu.png") center no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -170,34 +176,37 @@
     }
 
     li {
-      color: white;
+      color: $colorHeaderFonts;
       font-size: 25px;
       text-transform: uppercase;
+      transition: text-decoration ease-in-out 1s;
 
       &:hover {
-        font-weight: 600;
+        // font-weight: 600;
+        text-decoration: underline;
       }
 
       @include forTablet {
-        padding-left: 20%;
+        margin-left: 20%;
+        padding: 10px;
         font-size: 40px;
       }
     }
 
-    &--projects:hover {
-      color: $colorProjects;
-    }
+    // &--projects:hover {
+    //   color: $colorProjects;
+    // }
 
-    &--about:hover {
-      color: $colorAbout;
-    }
+    // &--about:hover {
+    //   color: $colorAbout;
+    // }
 
-    &--cv:hover {
-      color: $colorCv;
-    }
+    // &--cv:hover {
+    //   color: $colorCv;
+    // }
 
-    &--contact:hover {
-      color: $colorContact;
-    }
+    // &--contact:hover {
+    //   color: $colorContact;
+    // }
   }
 }

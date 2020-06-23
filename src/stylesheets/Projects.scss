@@ -2,7 +2,7 @@
 @import "utils/mixins";
 
 .Projects {
-  border-left: 3px solid $colorProjects;
+  // border-left: 3px solid $colorProjects;
   &__header {
     display: flex;
     justify-content: center;
@@ -11,6 +11,9 @@
       font-size: 14px;
       padding: 5px;
       cursor: pointer;
+      &:hover, &.showFilters {
+        color: $colorHeader;
+      }
     }
 
     &--filter {
@@ -26,8 +29,8 @@
         font-size: 14px;
         cursor: pointer;
 
-        &.is-active {
-          border-bottom: 2px solid $colorProjects;
+        &.is-active, &:hover {
+          border-bottom: 2px solid $colorHeader;
         }
 
         @include forTablet {

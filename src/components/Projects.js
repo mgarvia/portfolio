@@ -5,7 +5,7 @@ import '../stylesheets/Projects.scss';
 const Projects = props => {
   const { language, projects, updateFilter, html, css, js, react, wp } = props;
 
-  const showFilters = () => document.querySelector('.Projects__header--filter').classList.toggle('showFilters');
+  const showFilters = () => document.querySelectorAll('.Projects__header--filter, .fa-filter').forEach(item => item.classList.toggle('showFilters'));
 
   const getValue = e => {
     const filters = document.querySelectorAll('.filter-item');

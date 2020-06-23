@@ -5,7 +5,7 @@
   min-height: 100vh;
   position: relative;
   display: flex;
-  border-left: 3px solid $colorAbout;
+  // border-left: 3px solid $colorAbout;
 
   &__icons {
     width: 10vw;
@@ -19,8 +19,41 @@
       width: 4vw;
     }
 
-    img {
-      width: 55%;
+    div {
+      width: 100%;
+      background: red;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: right ease-in-out 2s;
+      // border: red 1px solid;
+
+      img {
+        width: 100%;
+        padding: 20%;
+        background-color: white;
+      }
+
+      p {
+        position: relative;
+        left: -100%;
+        z-index: -1;
+        transition: right ease-in-out 2s;
+        color: white;
+        text-align: left;
+      }
+      &:hover {
+        img {
+          cursor: pointer;
+        }
+        p {
+          color: inherit;
+          right: -5px;
+          left: unset;
+          z-index: 1;
+          transition: right ease-in-out 2s;
+        }
+      }
     }
   }
 
@@ -89,7 +122,6 @@
       }
 
       span {
-
         color: #5e79bc;
         font-weight: 600;
         @include forPc {
@@ -102,10 +134,10 @@
     height: fit-content;
 
     &:hover {
-
-      h3, span {
+      h3,
+      span {
         color: #5e79bc;
-        font-weight: 600;;
+        font-weight: 600;
       }
     }
 
@@ -155,10 +187,10 @@
     display: none;
 
     &:hover {
-
-      h3, span {
+      h3,
+      span {
         color: #5e8c64;
-        font-weight: 600;;
+        font-weight: 600;
       }
     }
 

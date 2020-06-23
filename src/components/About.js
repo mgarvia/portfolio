@@ -6,91 +6,130 @@ const About = props => {
 
   const { language } = props;
 
-  let TxtRotate = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-  };
+  // let TxtRotate = function (el, toRotate, period) {
+  //   this.toRotate = toRotate;
+  //   this.el = el;
+  //   this.loopNum = 0;
+  //   this.period = parseInt(period, 10) || 2000;
+  //   this.txt = '';
+  //   this.tick();
+  //   this.isDeleting = false;
+  // };
 
-  TxtRotate.prototype.tick = function () {
-    const i = this.loopNum % this.toRotate.length;
-    const fullTxt = this.toRotate[i];
+  // TxtRotate.prototype.tick = function () {
+  //   const i = this.loopNum % this.toRotate.length;
+  //   const fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+  //   if (this.isDeleting) {
+  //     this.txt = fullTxt.substring(0, this.txt.length - 1);
+  //   } else {
+  //     this.txt = fullTxt.substring(0, this.txt.length + 1);
+  //   }
 
-    this.el.innerHTML = '<span class="wrap"> ' + this.txt + '</span>';
+  //   this.el.innerHTML = '<span class="wrap"> ' + this.txt + '</span>';
 
-    const that = this;
-    let delta = 300 - Math.random() * 100;
+  //   const that = this;
+  //   let delta = 300 - Math.random() * 100;
 
-    if (this.isDeleting) { delta /= 2; }
+  //   if (this.isDeleting) { delta /= 2; }
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
+  //   if (!this.isDeleting && this.txt === fullTxt) {
+  //     delta = this.period;
+  //     this.isDeleting = true;
+  //   } else if (this.isDeleting && this.txt === '') {
+  //     this.isDeleting = false;
+  //     this.loopNum++;
+  //     delta = 500;
+  //   }
 
-    setTimeout(function () {
-      that.tick();
-    }, delta);
-  };
+  //   setTimeout(function () {
+  //     that.tick();
+  //   }, delta);
+  // };
 
-  window.onload = function () {
-    if (language === "EN") {
-      const elements = document.querySelectorAll('.txt-rotate-EN');
-      for (let element of elements) {
-        const toRotate = element.getAttribute('data-rotate');
-        const period = element.getAttribute('data-period');
-        if (toRotate) {
-          new TxtRotate(element, JSON.parse(toRotate), period);
-        }
-      }
-    } else {
-      const elements = document.querySelectorAll('.txt-rotate-ES');
-      for (let element of elements) {
-        const toRotate = element.getAttribute('data-rotate');
-        const period = element.getAttribute('data-period');
-        if (toRotate) {
-          new TxtRotate(element, JSON.parse(toRotate), period);
-        }
-      }
-    }
+  // window.onload = function () {
+  //   if (language === "EN") {
+  //     const elements = document.querySelectorAll('.txt-rotate-EN');
+  //     for (let element of elements) {
+  //       const toRotate = element.getAttribute('data-rotate');
+  //       const period = element.getAttribute('data-period');
+  //       if (toRotate) {
+  //         new TxtRotate(element, JSON.parse(toRotate), period);
+  //       }
+  //     }
+  //   } else {
+  //     const elements = document.querySelectorAll('.txt-rotate-ES');
+  //     for (let element of elements) {
+  //       const toRotate = element.getAttribute('data-rotate');
+  //       const period = element.getAttribute('data-period');
+  //       if (toRotate) {
+  //         new TxtRotate(element, JSON.parse(toRotate), period);
+  //       }
+  //     }
+  //   }
 
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    document.body.appendChild(css);
-  };
+  //   // INJECT CSS
+  //   var css = document.createElement("style");
+  //   css.type = "text/css";
+  //   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  //   document.body.appendChild(css);
+  // };
 
   return (
     <section className="About" id="About">
       <div className="About__icons">
-        <img alt="icono react" src="https://mgarvia.github.io/portfolio/images/react.png" />
-        <img alt="icono html5" src="https://mgarvia.github.io/portfolio/images/html5.png" />
-        <img alt="icono css3" src="https://mgarvia.github.io/portfolio/images/css3.png" />
-        <img alt="icono sass" src="https://mgarvia.github.io/portfolio/images/sass.png" />
-        <img alt="icono javascript" src="https://mgarvia.github.io/portfolio/images/js.png" />
-        <img alt="icono wordpress" src="https://mgarvia.github.io/portfolio/images/wordpress.png" />
-        <img alt="icono git" src="https://mgarvia.github.io/portfolio/images/git.png" />
-        <img alt="icono visual studio code" src="https://mgarvia.github.io/portfolio/images/visual-studio-code.png" />
-        <img alt="icono zeplin" src="https://mgarvia.github.io/portfolio/images/zeplin.png" />
-        <img alt="icono slack" src="https://mgarvia.github.io/portfolio/images/slack.png" />
-        <img alt="icono github" src="https://mgarvia.github.io/portfolio/images/github.png" />
-        <img alt="icono trello" src="https://mgarvia.github.io/portfolio/images/trello.png" />
-        <img alt="icono gulp" src="https://mgarvia.github.io/portfolio/images/gulp.png" />
+        <div>
+          <img alt="icono react" src="https://mgarvia.github.io/portfolio/images/react.png" />
+          <p>React</p>
+        </div>
+        <div>
+          <img alt="icono html5" src="https://mgarvia.github.io/portfolio/images/html5.png" />
+          <p>Html5</p>
+        </div>
+        <div>
+          <img alt="icono css3" src="https://mgarvia.github.io/portfolio/images/css3.png" />
+          <p>Css3</p>
+        </div>
+        <div>
+          <img alt="icono sass" src="https://mgarvia.github.io/portfolio/images/sass.png" />
+          <p>Sass</p>
+        </div>
+        <div>
+          <img alt="icono javascript" src="https://mgarvia.github.io/portfolio/images/js.png" />
+          <p>Javascript</p>
+        </div>
+        <div>
+          <img alt="icono wordpress" src="https://mgarvia.github.io/portfolio/images/wordpress.png" />
+          <p>Wordpress</p>
+        </div>
+        <div>
+          <img alt="icono git" src="https://mgarvia.github.io/portfolio/images/git.png" />
+          <p>Git</p>
+        </div>
+        <div>
+          <img alt="icono visual studio code" src="https://mgarvia.github.io/portfolio/images/visual-studio-code.png" />
+          <p>VSCode</p>
+        </div>
+        <div>
+          <img alt="icono zeplin" src="https://mgarvia.github.io/portfolio/images/zeplin.png" />
+          <p>Zeplin</p>
+        </div>
+        <div>
+          <img alt="icono slack" src="https://mgarvia.github.io/portfolio/images/slack.png" />
+          <p>Slack</p>
+        </div>
+        <div>
+          <img alt="icono github" src="https://mgarvia.github.io/portfolio/images/github.png" />
+          <p>Github</p>
+        </div>
+        <div>
+          <img alt="icono trello" src="https://mgarvia.github.io/portfolio/images/trello.png" />
+          <p>Trello</p>
+        </div>
+        <div>
+          <img alt="icono gulp" src="https://mgarvia.github.io/portfolio/images/gulp.png" />
+          <p>Gulp</p>
+        </div>
       </div>
       <div className="About__section">
         <div className="About__header section__header">

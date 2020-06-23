@@ -35,7 +35,7 @@ const Header = props => {
                   <span className="text__front">front-en developer</span>
                 </p>
               }
-              <p className="text__junior">junior </p>
+              {/* <p className="text__junior">junior </p> */}
             </div>
           </h1>
           {language === "EN"
